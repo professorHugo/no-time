@@ -11,3 +11,4 @@
 <![endif]-->
 <script src="js/bootstrap.js"></script>
 <script src="js/Ajax/definirClasse.js"></script>
+<!--<script src="js/Ajax/DetalhesHabilidades.js"></script>-->

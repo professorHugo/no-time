@@ -56,7 +56,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="Classe">Classe:</label>
-                                <select name="Classe" id="Classe" class="form-control" onchange="definirClasse(this.value);exibirEquipamentos(this.value)">
+                                <select name="Classe" id="ClassePersonagem" class="form-control" onchange="definirClasse(this.value);exibirEquipamentos(this.value);escolherHabilidades(this.value)">
                                     <option value="NULL" selected disabled>Escolha a Classe</option>
                                     <?php
                                     while($Classes = mysqli_fetch_assoc($ExeQrBuscarClasses)){
@@ -82,9 +82,11 @@
                     <!--Equipamentos-->
                     <div class="clearfix"></div>
                     <div class="form-group">
-                        <div id="Equipamentos">
-                            <?php include 'parts/Cadastro-Personagem-Armas.php'?>
-                        </div>
+                        <div id="Equipamentos"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <div id="HabilidadesClasse"></div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
