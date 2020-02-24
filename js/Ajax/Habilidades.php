@@ -18,7 +18,7 @@ if(isset($_GET['C'])){
 ?>
 <h3>Habilidades </h3>
 <div class="col-md-12">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <label for="habilidade1">Habilidade 1</label>
         <select name="habilidade1" id="habilidade1" class="form-control" onchange="mostrarDetalhesHabilidade1(this.value)">
             <?php
@@ -40,7 +40,7 @@ if(isset($_GET['C'])){
 </div>
 
 <div class="col-md-12">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <label for="habilidade2">Habilidade 2</label>
         <select name="habilidade2" id="habilidade2" class="form-control" onchange="mostrarDetalhesHabilidade2(this.value)">
             <?php

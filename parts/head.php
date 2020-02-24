@@ -11,4 +11,6 @@
 <![endif]-->
 <script src="js/bootstrap.js"></script>
 <script src="js/Ajax/definirClasse.js"></script>
-<!--<script src="js/Ajax/DetalhesHabilidades.js"></script>-->
+<script src="js/Contagem-Caracteres.js"></script>
+<script src="js/Contagem-Pontos.js"></script>
+<script src="js/Contagem-Pontos-Classe.js"></script>
