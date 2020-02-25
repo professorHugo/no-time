@@ -18,12 +18,11 @@ $QueryBuscarPlayers = "
         ON p.lv_player = xp.id_level
     ";
 
-$ExeQrBuscarPlayers = mysqli_query($connection, $QueryBuscarPlayers);
-$LinQrBuscarPlayers = mysqli_num_rows($ExeQrBuscarPlayers);
-if($LinQrBuscarPlayers > 0){
+if($ExeQrBuscarPlayers = mysqli_query($connection, $QueryBuscarPlayers)){
+    if($LinQrBuscarPlayers = mysqli_num_rows($ExeQrBuscarPlayers) > 0){
     ?>
     <h2>Players Cadastrados: <?php echo $LinQrBuscarPlayers?></h2>
-    <table class="table table-striped">
+    <table class="table table-condensed table-hover table-responsive">
         <tr>
             <td>Id do Player</td>
             <td>Jogador</td>
@@ -34,9 +33,9 @@ if($LinQrBuscarPlayers > 0){
             <td>Próximo Lv</td>
             <td>Ver</td>
         </tr>
-    <?php
-    while($Players = mysqli_fetch_assoc($ExeQrBuscarPlayers)){
-        ?>
+        <?php
+        while($Players = mysqli_fetch_assoc($ExeQrBuscarPlayers)){
+            ?>
         <tr>
             <td><?php echo $Players['id_player']?></td>
             <td><?php echo $Players['nome_player']?></td>
@@ -45,13 +44,18 @@ if($LinQrBuscarPlayers > 0){
             <td><?php echo $Players['lv_player']?></td>
             <td><?php echo $Players['xp_player']?></td>
             <td><?php echo $Players['lv_pontos_xp']?></td>
-            <td><a href="?Player=<?php echo $Players['id_player']?>">Ver</a></td>
+            <td>
+                <a href="?url=MostrarPlayer&Player=<?php echo $Players['id_player']?>">
+                    <i class="glyphicon glyphicon-eye-open"></i>
+                </a>
+            </td>
         </tr>
         <?php
-    }
-    ?>
+        }
+        ?>
     </table>
     <?php
+    }
 }else{
-    echo "Ainda não tem players cadastrados";
+    echo "Você ainda não tem personagens";
 }

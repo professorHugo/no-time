@@ -33,7 +33,7 @@
                         <h3>Dados do Jogador</h3>
                         <div class="col-md-12">
                             <label for="NomePlayer">Jogador</label>
-                            <input type="text" id="NomePlayer" name="NomePlayer" class="form-control" placeholder="Nome do Jogador">
+                            <input type="text" id="NomePlayer" name="NomePlayer" class="form-control" placeholder="<?php echo $_SESSION['Login']['nome_usuario'];?>" >
                         </div>
                         <div class="col-md-12">
                             <div class="col-md-6">
@@ -56,7 +56,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="Classe">Classe:</label>
-                                <select name="Classe" id="ClassePersonagem" class="form-control" onchange="definirClasse(this.value);exibirEquipamentos(this.value);escolherHabilidades(this.value)">
+                                <select name="ClassePersonagem" id="ClassePersonagem" class="form-control" onchange="definirClasse(this.value);exibirEquipamentos(this.value);escolherHabilidades(this.value)">
                                     <option value="NULL" selected disabled>Escolha a Classe</option>
                                     <?php
                                     while($Classes = mysqli_fetch_assoc($ExeQrBuscarClasses)){
@@ -103,7 +103,7 @@
                     </div>
                     <div class="col-md-6">
                         <button type="button" class="btn btn-xl btn-danger" data-dismiss="modal">Canelar</button>
-                        <button type="submit" class="btn btn-xl btn-success" name="CadastrarAluno">Cadastrar</button>
+                        <button type="submit" class="btn btn-xl btn-success" name="CadastrarPersonagem">Cadastrar</button>
                     </div>
                 </div>
             </div>

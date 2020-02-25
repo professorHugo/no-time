@@ -272,13 +272,15 @@ CREATE TABLE tb_item_armas(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 INSERT INTO tb_item_armas(
+    id_item_arma,
     descricao_item_arma,
     tipo_item_arma,
     dano_item_arma
 )VALUES
-("-","-",0),
-("Faca de combate de Aço Inoxidável", "Proximidade", 1),
-("Pistola .45 com munição de chumbo", "Disparo Curto", 2);
+(999,"-","-",0),
+(1,"Faca de combate de Aço Inoxidável", "Proximidade", 1),
+(2,"Pistola .45 com munição de chumbo", "Disparo Curto", 2);
+
 
 #TABELA DOS ITENS DE DEFESA
 CREATE TABLE tb_item_def(
@@ -289,17 +291,28 @@ CREATE TABLE tb_item_def(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 INSERT INTO tb_item_def(
+    id_item_def,
     descricao_item_def,
     tipo_item_def,
     dano_item_def
 )VALUES
-("-","-",0),
-("Colete a prova de balas", "Defesa", 1);
+(999,"-","-",0),
+(1,"Colete a prova de balas", "Defesa", 1);
+
+#Tabela de Usuarios#
+
+CREATE TABLE tb_usuarios(
+    id_usuario int primary key auto_increment,
+    nome_usuario varchar(255),
+    email_usuario varchar(255),
+    senha_usuario varchar(255),
+    nivel_usuario int default "0"
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 #TABELA DE PLAYERS#
 CREATE TABLE tb_players(
     id_player int primary key auto_increment,
-    nome_player varchar(255),
+    nome_player int,
     personagem_player varchar(255),
     raca_player int,
     classe_player int,
@@ -342,6 +355,7 @@ CREATE TABLE tb_players(
     habilidade7 int,
     habilidade8 int,
     habilidade9 int,
+    FOREIGN KEY (nome_player) REFERENCES tb_usuarios(id_usuario),
     FOREIGN KEY (raca_player) REFERENCES tb_racas(id_raca),
     FOREIGN KEY (classe_player) REFERENCES tb_classes(id_classe),
     FOREIGN KEY (arma1_player) REFERENCES tb_item_armas(id_item_arma),
@@ -362,5 +376,3 @@ CREATE TABLE tb_players(
     FOREIGN KEY (habilidade8) REFERENCES tb_lista_habilidades(id_habilidade),
     FOREIGN KEY (habilidade9) REFERENCES tb_lista_habilidades(id_habilidade)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
-
-INSERT INTO `tb_players` (`id_player`, `nome_player`, `personagem_player`, `raca_player`, `classe_player`, `xp_player`, `lv_player`, `atk_player`, `hab_player`, `atr1_titulo`, `atr1_v`, `atr2_titulo`, `atr2_v`, `atr3_titulo`, `atr3_v`, `atr4_titulo`, `atr4_v`, `hab1_titulo`, `hab1_v`, `hab2_titulo`, `hab2_v`, `hab3_titulo`, `hab3_v`, `hab4_titulo`, `hab4_v`, `hab5_titulo`, `hab5_v`, `arma1_player`, `arma2_player`, `arma3_player`, `arma4_player`, `arma5_player`, `def1_player`, `def2_player`, `def3_player`, `habilidade1`, `habilidade2`, `habilidade3`, `habilidade4`, `habilidade5`, `habilidade6`, `habilidade7`, `habilidade8`, `habilidade9`) VALUES (NULL, 'Ricardo Gasparac', 'Alexander Payne', '1', '1', '0', '1', '100', '70', 'Vida', '35', 'Força', '20', 'Velocidade', '10', 'Conhecimento', '35', 'Criatividade', '25', 'Raciocínio', '15', 'Inteligência', '12', 'Produzir', '18', 'Especial', '18', '2', '3', '1', '1', '1', '2', '1', '1', '1', '2', '3', '4', '5', '6', '1', '1', '1'),(NULL, 'Allan', 'Dante', '1', '8', '0', '1', '100', '70', 'Vida', '30', 'Força', '15', 'Velocidade', '20', 'Precisão', '35', 'Furtividade', '13', 'Destreza', '15', 'Conhecimento', '17', 'Inteligência', '25', 'Especial', '18', '2', '3', '1', '1', '1', '2', '1', '1', '1', '2', '3', '4', '5', '6', '1', '1', '1'),(NULL, 'Ismael', 'Vulpis', '1', '5', '0', '1', '100', '70', 'Vida', '37', 'Força', '15', 'Velocidade', '18', 'Inteligência', '30', 'Programação', '25', 'Raciocínio', '25', 'Lábia', '10', 'Agilidade', '10', 'Especial', '18', '2', '3', '1', '1', '1', '2', '1', '1', '1', '2', '3', '4', '5', '6', '1', '1', '1'),(NULL, 'Davi', 'Shelby-1.0', '2', '3', '0', '1', '100', '70', 'Vida', '24', 'Força', '15', 'Velocidade', '26', 'Furtividade', '35', 'Destreza', '10', 'Furto', '25', 'Extorsão', '5', 'Lábia', '30', 'Especial', '18', '2', '3', '1', '1', '1', '2', '1', '1', '1', '2', '3', '4', '5', '6', '1', '1', '1');

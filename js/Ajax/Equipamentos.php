@@ -21,6 +21,7 @@ if(isset($_GET['C'])){
 
 
 <h3>Equipamentos </h3>
+
 <div class="col-md-6">
     <div class="col-md-12">
         <p class="lead">Armas</p>
@@ -32,11 +33,17 @@ if(isset($_GET['C'])){
                         ?>
                 <option value="<?php echo $Arma1['id_item_arma']?>">
                     <?php echo $Arma1['descricao_item_arma']?>
+<!--
+                    <input type="hidden" name="nome_arma1" value="<?php echo $Arma1['descricao_item_arma']?>">
+                    <input type="hidden" name="tipo_arma1" value="<?php echo $Arma1['tipo_item_arma']?>">
+                    <input type="hidden" name="dano_arma1" value="<?php echo $Arma1['dano_item_arma']?>">
+-->
                 </option>
                 <?php
                     }
                 ?>
             </select>
+
         </div>
         <div class="col-md-6">
             <label for="arma2_player">Arma 2</label>
@@ -47,6 +54,11 @@ if(isset($_GET['C'])){
                 <option value="<?php echo $Arma2['id_item_arma']?>">
                     <?php echo $Arma2['descricao_item_arma']?>
                 </option>
+<!--
+                <input type="hidden" name="nome_arma2" value="<?php echo $Arma2['descricao_item_arma']?>">
+                <input type="hidden" name="tipo_arma2" value="<?php echo $Arma2['tipo_item_arma']?>">
+                <input type="hidden" name="dano_arma2" value="<?php echo $Arma2['dano_item_arma']?>">
+-->
                 <?php
                     }
                 ?>
@@ -69,6 +81,11 @@ if(isset($_GET['C'])){
                 <option value="<?php echo $Def1['id_item_def']?>">
                     <?php echo $Def1['descricao_item_def']?>
                 </option>
+<!--
+                <input type="hidden" name="nome_def" value="<?php echo $Def1['descricao_item_def']?>">
+                <input type="hidden" name="tipo_def" value="<?php echo $Def1['tipo_item_def']?>">
+                <input type="hidden" name="dano_def" value="<?php echo $Def1['dano_item_def']?>">
+-->
                 <?php
                     }
                 ?>
@@ -76,5 +93,6 @@ if(isset($_GET['C'])){
         </div>
     </div>
 </div>
+
 <?php
 }
