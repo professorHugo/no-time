@@ -33,40 +33,48 @@ INSERT INTO tb_lista_habilidades(
     descricao_habilidade
 )
 VALUES
+(1,"Escolha a habilidade",0,0,"------------"),
 (1,'Criar Arma Pequena',21,28,'Criar uma arma ao gosto do player, depende dos pontos de criação'),
 (1,'Criar Arma Média',22,29,'Criar uma arma ao gosto do player, depende dos pontos de criação'),
 (1,'Criar Bomba C4',23,31,'Criar uma bomba de explosão de médio alcance'),
 (1,'Criar Bomba de Nitrogênio Líquido',24,32,'Cria uma bomba de Nitrogênio Líquido, permite congelar (D2), oponente pode perder 2 rodadas (D2)'),
 (1,'Criar Arma Grande',25,33,'Criar arma a gosto do player'),
 (1,'Criar Bomba Termo Nuclear',30,40,'Cria uma bomba de explosão Termo Nuclear (precisa 3 rodadas para detonação)'),
+(2,"Escolha a habilidade",0,0,"------------"),
 (2,'Negociar', 21,28,'Iniciar negociação com algum indivíduo'),
 (2,'Suborno', 22,29,'Subornar alguém para conseguir informações'),
 (2,'Comprar com Desconto', 23,31,'Efetuar compra de qualquer coisa com descontos'),
 (2,'Golpista', 30,40,'Faz com que o inimigo acredite em qualquer história'),
+(3,"Escolha a habilidade",0,0,"------------"),
 (3,'Furto Rápido', 21,28,'Tentar furtar itens de pequeno valor'),
 (3,'Assalto', 22,29,'Faz um assalto, tentando não chamar a atenção'),
 (3,'Chantagear', 23,31,'Chantagear qualquer personagem, tanto NPC quanto Player'),
 (3,'Roubo Planejado', 24,32,'Pontos de Furto +3'),
 (3,'Jogada de Mestre', 30,40,'Pontos de Furto +10'),
+(4,"Escolha a habilidade",0,0,"------------"),
 (4,'Ataque Furtivo', 21,28,'Iniciar um ataque furtivo, usando até 2 golpes, ATK + 3'),
 (4,'Ataque Acrobata', 22,29,'O usuário faz acrobacias para atingir o inimigo ganhando VEL + 2'),
 (4,'Ataque com arma branca', 23,31,'O usuário usa um ataque mais eficiente com armas Brancas, VEL+2 2Rodadas'),
 (4,'Ataque com perícia', 24,32,'O usuário ataca usando mais perícia, ATK+3 2Rodadas'),
 (4,'Destruidor de Corações', 35,47,'O usuário ataca diretamente o coração do inimigo arrancando de seu interior (instant kill)'),
+(5,"Escolha a habilidade",0,0,"------------"),
 (5,'Controlar Máquina', 21,28,'O usuário pode controlar quaisquer tipos de máquinas'),
 (5,'Hackear', 22,29,'O usuário pode invadir qualquer sistema de tecnologia'),
 (5,'Descriptografar', 23,31,'Remover criptogravia de qualquer sistema de acesso'),
 (5,'Invasão', 24,32,'O hacker pode invadir o sistema para roubar informações, PER+2'),
 (5,'Black out', 30,40,'O Hacker pode causar um Black out em todo o sistema, PER+5'),
+(6,"Escolha a habilidade",0,0,"------------"),
 (6,'Dar Fuga (terrestre)', 21,28,'O piloto poderá desviar de qualquer perseguidor'),
 (6,'Ligação Direta', 22,29,'O piloto poderá fazer ligação direta de energia em veículos terrestres'),
 (6,'Desvio Rápido (aéreo)', 23,31,'O piloto poderá desviar usando veículos aéreos'),
 (6,'Fuga de Mestre', 30,40,'O piloto conseguirá fugir de quaisquer perseguidores (terrestre e/ou aéreo)'),
+(7,"Escolha a habilidade",0,0,"------------"),
 (7,'Pick Lock', 21,28,'Abre qualquer tipo de fechadura e porta eletrônica'),
 (7,'Disfarçar', 22,29,'Faz um disfarce simples para fugir de alguma situação'),
 (7,'Distrair', 23,31,'Chama a atenção para outras coisas e situações'),
 (7,'Esconder', 24,32,'Esconder-se em algum lugar para fugir'),
 (7,'Disguise Kit', 30,40,'Faz a transformação completa do usuário, incluindo voz, altura, peso e demais atributos...'),
+(8,"Escolha a habilidade",0,0,"------------"),
 (8,'Tiro Duplo', 21,28,'Atira duas vezes simultâneas'),
 (8,'Tiro Triplo', 21,28,'Atira três vezes simultâneas'),
 (8,'Aumento de Precisão', 21,28,'Aumenta a precisão para tentar um Head Shot'),
@@ -272,14 +280,13 @@ CREATE TABLE tb_item_armas(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 INSERT INTO tb_item_armas(
-    id_item_arma,
     descricao_item_arma,
     tipo_item_arma,
     dano_item_arma
 )VALUES
-(999,"-","-",0),
-(1,"Faca de combate de Aço Inoxidável", "Proximidade", 1),
-(2,"Pistola .45 com munição de chumbo", "Disparo Curto", 2);
+("-","-",0),
+("Faca de combate de Aço Inoxidável", "Proximidade", 1),
+("Pistola .45 com munição de chumbo", "Disparo Curto", 2);
 
 
 #TABELA DOS ITENS DE DEFESA
@@ -291,13 +298,12 @@ CREATE TABLE tb_item_def(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 INSERT INTO tb_item_def(
-    id_item_def,
     descricao_item_def,
     tipo_item_def,
     dano_item_def
 )VALUES
-(999,"-","-",0),
-(1,"Colete a prova de balas", "Defesa", 1);
+("-","-",0),
+("Colete a prova de balas", "Defesa", 1);
 
 #Tabela de Usuarios#
 

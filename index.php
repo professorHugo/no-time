@@ -47,8 +47,10 @@ and open the template in the editor.
                 $Url = $_GET['url'];
                 switch($Url){
                     case $Url: include "pages/" . $Url . ".php";break;
-                    default: include "pages/Todos-Os-Players.php";break;
+                    default: include "pages/Todos-Os-Personagens.php";break;
                 }
+            }else{
+                include 'pages/Home.php';
             }
         ?>
 

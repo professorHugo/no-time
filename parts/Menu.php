@@ -50,7 +50,7 @@
                     <ul class="dropdown-menu">
                         <li class="dropdown-header">Personagens</li>
                         <li>
-                            <a href="?url=Todos-Os-Players">Todos os Personagens</a>
+                            <a href="?url=Todos-Os-Personagens">Todos os Personagens</a>
                         </li>
                         <li>
                             <a href="#" data-toggle="modal" data-target="#Cadastro-Player">Criação do Personagem</a>

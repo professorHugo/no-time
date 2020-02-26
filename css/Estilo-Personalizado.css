@@ -8,11 +8,49 @@ html{
     position: absolute;
 }
 #Background{
-    background: rgba(255,255,255,.7) center center fixed;
+    color: #fff;
+    text-shadow: 1px 1px #333 ;
+    background: rgba(100,100,100,.7) center center fixed;
     padding-bottom: 25px;
     margin-bottom: 2%;
     border-radius: 10px;
 }
 h1#Background{
     padding-top: 25px;
+}
+.chamada-item{
+    text-align: center;
+}
+.chamada-item a{
+    color: #fff;
+    text-decoration: none;
+    transition: 1s;
+}
+.chamada-item a{
+    color: #fff;
+    transition: 1s;
+    
+}
+.chamada-item a:hover h3{
+    color: #fff;
+    transition: 1s;
+    text-shadow: 2px 2px #000;
+    font-size: 28px;
+    top: 20px;
+    margin-bottom: 0;
+}
+.chamada-item h3{
+    position: relative;
+    top: 50px;
+    transition: 1s;
+}
+.chamada-item img{
+    position: relative;
+    bottom: 25px;
+}
+.Adm-Ativo{
+    text-shadow: 2px 2px #000;
+    font-size: 28px;
+    top: 20px!important;
+    margin-bottom: 0;
 }
