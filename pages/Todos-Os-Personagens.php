@@ -1,5 +1,8 @@
 <?php
-$QueryBuscarPlayers = "
+$Player = $_SESSION['Login']['id_usuario'];
+//Validação para administradores
+if($_SESSION['Login']['nivel_usuario'] == 1){
+    $QueryBuscarPlayers = "
     SELECT 
         p.*,
         r.nome_raca,
@@ -17,6 +20,28 @@ $QueryBuscarPlayers = "
     INNER JOIN tb_levels xp
         ON p.lv_player = xp.id_level
     ";
+}else{
+    $QueryBuscarPlayers = "
+    SELECT 
+        p.*,
+        r.nome_raca,
+        c.nome_classe,
+        xp.lv_pontos_xp
+
+    FROM tb_players p
+
+    INNER JOIN tb_racas r
+        ON p.raca_player = r.id_raca
+
+    INNER JOIN tb_classes c
+        ON p.classe_player = c.id_classe
+
+    INNER JOIN tb_levels xp
+        ON p.lv_player = xp.id_level
+    WHERE nome_player = '$Player' 
+    ";
+}
+
 
 if($ExeQrBuscarPlayers = mysqli_query($connection, $QueryBuscarPlayers)){
     if($LinQrBuscarPlayers = mysqli_num_rows($ExeQrBuscarPlayers) > 0){

@@ -54,3 +54,7 @@ h1#Background{
     top: 20px!important;
     margin-bottom: 0;
 }
+.modal-open .modal{
+    color: #333!important;
+    text-shadow: none;
+}

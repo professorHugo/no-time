@@ -52,15 +52,15 @@
                 <div class="clearfix"></div>
                 <!--Footer-->
                 <div class="modal-footer">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="AceitoContrato" id="AceitoContrato" value="1">
-                                Aceito os termos de contratos estabelecidos <a href="#" target="_blank">aqui</a>
+                                <input type="checkbox" name="AceitoMudarClasse" id="AceitoMudarClasse" value="1">
+                                Sei que ao salvar os dados declarados aqui vão alterar as informações armazenadas no sistema
                             </label>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <button type="button" class="btn btn-xl btn-danger" data-dismiss="modal">Canelar</button>
                         <button type="submit" class="btn btn-xl btn-success" name="EditarClasse"><i></i> Salvar</button>
                     </div>

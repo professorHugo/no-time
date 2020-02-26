@@ -4,44 +4,33 @@
     $ResQrBuscarTodasClasses = mysqli_num_rows($ExeQrBuscarTodasClasses);
 
 ?>
-<table class="table table-responsive">
-    <tr style="background-color:#666">
-        <td>Id</td>
-        <td>Classe</td>
-        <td>Atributo1</td>
-        <td>Atributo2</td>
-        <td>Atributo3</td>
-        <td>Atributo4</td>
-        <td>Habilidade1</td>
-        <td>Habilidade2</td>
-        <td>Habilidade3</td>
-        <td>Habilidade4</td>
-        <td>Habilidade5</td>
-        <td>Editar</td>
-    </tr>
-    <?php
+<div class="col-md-6 col-md-push-3">
+    <table class="table table-hover">
+        <tr style="background-color:#666">
+            <td>Id</td>
+            <td>Classe</td>
+            <td class="text-center">Visualizar</td>
+            <td class="text-center">Editar</td>
+        </tr>
+        <?php
     if($ResQrBuscarTodasClasses > 0){
         foreach($ExeQrBuscarTodasClasses as $ResClasse):
             ?>
-    <tr style="background-color:#666">
-        <td><?php echo $ResClasse['id_classe']?></td>
-        <td><?php echo $ResClasse['nome_classe']?></td>
-        <td><?php echo $ResClasse['atr1']?></td>
-        <td><?php echo $ResClasse['atr2']?></td>
-        <td><?php echo $ResClasse['atr3']?></td>
-        <td><?php echo $ResClasse['atr4']?></td>
-        <td><?php echo $ResClasse['hab_c1']?></td>
-        <td><?php echo $ResClasse['hab_c2']?></td>
-        <td><?php echo $ResClasse['hab_c3']?></td>
-        <td><?php echo $ResClasse['hab_c4']?></td>
-        <td><?php echo $ResClasse['hab_c5']?></td>
-        <td>
-            <a href="#" data-toggle="modal" data-target="#EditarClasse<?php echo $ResClasse['id_classe']?>"><i class="glyphicon glyphicon-pencil"></i></a>
-        </td>
-    </tr>
-    <?php
+        <tr>
+            <td style="background-color:#666"><?php echo $ResClasse['id_classe']?></td>
+            <td><?php echo $ResClasse['nome_classe']?></td>
+            <td class="text-center">
+                <a href="#" data-toggle="modal" data-target="#VisualizarClasse<?php echo $ResClasse['id_classe']?>"><i class="glyphicon glyphicon-eye-open"></i></a>
+            </td>
+            <td class="text-center">
+                <a href="#" data-toggle="modal" data-target="#EditarClasse<?php echo $ResClasse['id_classe']?>"><i class="glyphicon glyphicon-pencil"></i></a>
+            </td>
+        </tr>
+        <?php
         include 'parts/Modals/EditarClasse.php';
+        include 'parts/Modals/VisualizarClasse.php';
         endforeach;
     }
 ?>
-</table>
+    </table>
+</div>

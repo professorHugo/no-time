@@ -14,13 +14,16 @@ O sistema começa a se tornar funcional, é necessário complementar recursos de
     Dados permitidos até o momento:
     - Editar as classes:
         - Recursos visuais como nome e descrição de atributos;
-    - Editar Raças: Apenas o nome    
+    - Editar Raças: Apenas o nome
 
 Na próxima jornada, o objetivo é concluir as partes de edições de conteúdo para os tópicos:
 
     - Finalizar as edições de recursos do sistema;
+    - Adicionar Capitulos ao jogo;
+    - Adicionar História do personagem (criar nova tabela no banco de dados);
     - Adicionar Classes;
-    - Adicionar Raças;
+    - Adicionar Raças:
+        - Ajustar Banco de dados para inserir descrições das raças;
     - Adicionar Equipamentos
         - Armas e Defesas;
     - Adicionar Skills;
