@@ -1,5 +1,5 @@
 <?php
-/**/
+/*
 $HOST   = 'localhost';
 $USER   = 'root';
 $PASS   = '';
@@ -14,7 +14,7 @@ if($connection){
     echo "erro";
 }
 
-/*
+/**/
 $HOST   = 'localhost';
 $USER   = 'n2yco435_no_time';
 $PASS   = 'o;(Vz#kmwiZG';
