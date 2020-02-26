@@ -18,7 +18,7 @@
 </div>
 <div class="col-md-3 chamada-item">
     <a href="?url=Todos-Os-Personagens">
-        <h3>Todos os Personagens</h3>
+        <h3>Todos os <br>Personagens</h3>
         <img src="img/Layout/holograma.png" class="img-responsive" alt="">
     </a>
 </div>

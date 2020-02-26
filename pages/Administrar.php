@@ -4,9 +4,12 @@
     if(isset($_GET['T'])){
         $ItemADM = $_GET['T'];
     }
-    if(isset($_GET['Editar'])){
+    if(isset($_GET['EditarClasse'])){
         include 'pages/Adm/Editar-Classe.php';
     }
+    if(isset($_GET['EditarRaca'])){
+            include 'pages/Adm/Editar-Raca.php';
+        }
 ?>
 <div class="row">
     <div class="col-md-1"></div>

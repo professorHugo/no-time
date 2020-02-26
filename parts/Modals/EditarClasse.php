@@ -1,6 +1,6 @@
 <!--Modal para cadastro do aluno novo-->
 <div class="modal fade in" id="EditarClasse<?php echo $ResClasse['id_classe']?>" tabindex="-1" role="dialog" aria-labelledby="Cadastro-Player" style="">
-    <form action="index.php?url=Administrar&T=Classes&Editar" method="post" class="">
+    <form action="index.php?url=Administrar&T=Classes&EditarClasse" method="post" class="">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
