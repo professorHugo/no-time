@@ -3,10 +3,11 @@ O sistema começa a se tornar funcional, é necessário complementar recursos de
 
 Até o momento, o sistema conta com cadastro de usuários a partir de um e-mail com senha.
 
-    Ao efetuar o cadastro, o sistema já faz a conexão e login do usuário, o qual tem nível de permissão 0. Isso significa que o usuário poderá apenas fazer interação com os dados de sua própria conta.
-    
-    Pode adicionar seus personagens;
-    Pode visualizar seus personagens;
+    Ao efetuar o cadastro o sistema já faz a conexão e login do usuário
+    Usuário inicial tem nível de permissão 0. 
+    Isso significa que o usuário poderá apenas fazer interação com os dados de sua própria conta:    
+        - Pode adicionar seus personagens;
+        - Pode visualizar seus personagens;
 
 Ao permitir o nível de acesso 1 o usuário poderá editar os dados do sistema.
 
