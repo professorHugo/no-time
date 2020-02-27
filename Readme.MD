@@ -14,7 +14,8 @@ O sistema começa a se tornar funcional, é necessário complementar recursos de
     Dados permitidos até o momento:
     - Editar as classes:
         - Recursos visuais como nome e descrição de atributos;
-    - Editar Raças: Apenas o nome
+    - Editar Raças: Apenas o nome;
+    - Editar Armas;
 
 Na próxima jornada, o objetivo é concluir as partes de edições de conteúdo para os tópicos:
 
