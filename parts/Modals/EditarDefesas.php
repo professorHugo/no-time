@@ -1,6 +1,6 @@
 <!--Modal para cadastro do aluno novo-->
-<div class="modal fade in" id="EditarArma<?php echo $ResArmas['id_item_arma']?>" tabindex="-1" role="dialog" aria-labelledby="Cadastro-Player" style="">
-    <form action="index.php?url=Administrar&T=Armas&EditarArma" method="post" class="">
+<div class="modal fade in" id="EditarDef<?php echo $ResDef['id_item_def']?>" tabindex="-1" role="dialog" aria-labelledby="Cadastro-Player" style="">
+    <form action="index.php?url=Administrar&T=Defesas&EditarDefesa" method="post" class="">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -10,29 +10,29 @@
                     <h4 class="modal-title" id="Modal-Editar-Classe">
                         Editando a arma:
                         <?php echo 
-                            lmword($ResArmas['descricao_item_arma'],16)." | ID: ".$ResArmas['id_item_arma']
+                            lmword($ResDef['descricao_item_def'],16)." | ID: ".$ResDef['id_item_def']
                         ?>
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <input type="hidden" name="ArmaEditar" value="<?php echo $ResArmas['id_item_arma']?>">
+                    <input type="hidden" name="DefEditar" value="<?php echo $ResDef['id_item_def']?>">
                     <div class="col-md-12">
-                        <label for="NomeArma">Nome da Arma</label>
-                        <input type="text" class="form-control" name="NomeArma" id="NomeArma" value="<?php echo $ResArmas['descricao_item_arma']?>">
+                        <label for="NomeDef">Nome da Defesa</label>
+                        <input type="text" class="form-control" name="NomeDef" id="NomeDef" value="<?php echo $ResDef['descricao_item_def']?>">
                     </div>
                     <div class="clearfix"></div>
                     <div class="col-md-4">
-                        <label for="TipoArma">Tipo</label>
-                        <input type="text" class="form-control" name="TipoArma" id="TipoArma" value="<?php echo $ResArmas['tipo_item_arma']?>">
+                        <label for="TipoDef">Tipo</label>
+                        <input type="text" class="form-control" name="TipoDef" id="TipoDef" value="<?php echo $ResDef['tipo_item_def']?>">
                     </div>
                     <div class="col-md-4">
-                        <label for="ClasseArma">Classe</label>
-                        <input type="text" class="form-control" name="ClasseArma" id="ClasseArma" value="<?php echo 'Classe->implementar'; ?>">
+                        <label for="ClasseDef">Classe</label>
+                        <input type="text" class="form-control" name="ClasseDef" id="ClasseDef" value="<?php echo 'Classe->implementar'; ?>">
                     </div>
                     
                     <div class="col-md-4">
-                        <label for="DanoArma">Dano</label>
-                        <input type="text" class="form-control" name="DanoArma" id="DanoArma" value="<?php echo $ResArmas['dano_item_arma']; ?>">
+                        <label for="DanoDef">Dano</label>
+                        <input type="text" class="form-control" name="DanoDef" id="DanoDef" value="<?php echo $ResDef['dano_item_def']; ?>">
                     </div>
                     
                     <div class="clearfix"></div>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-md-4">
                         <button type="button" class="btn btn-xl btn-danger" data-dismiss="modal">Canelar</button>
-                        <button type="submit" class="btn btn-xl btn-success" name="EditaArma"><i></i> Salvar</button>
+                        <button type="submit" class="btn btn-xl btn-success" name="EditaDef"><i></i> Salvar</button>
                     </div>
                 </div>
             </div>

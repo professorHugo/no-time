@@ -33,7 +33,7 @@
         ";
 
         if(mysqli_query($connection, $QueryEditarClasse)){
-            echo "Editado com sucesso!";
+            echo "Editado com sucesso!<br>Inserir Modal";
         }else{
             echo "Erro".mysqli_error($connection);
         }   

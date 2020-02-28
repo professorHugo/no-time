@@ -8,8 +8,17 @@
         include 'pages/Adm/Editar-Classe.php';
     }
     if(isset($_GET['EditarRaca'])){
-            include 'pages/Adm/Editar-Raca.php';
-        }
+        include 'pages/Adm/Editar-Raca.php';
+    }
+    if(isset($_GET['EditarArma'])){
+        include 'pages/Adm/Editar-Arma.php';
+    }
+    if(isset($_GET['EditarDefesa'])){
+        include 'pages/Adm/Editar-Def.php';
+    }
+    if(isset($_GET['EditarSkills'])){
+        include 'pages/Adm/Editar-Skill.php';
+    }
 ?>
 <div class="row">
     <div class="col-md-1"></div>

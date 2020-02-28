@@ -1,4 +1,4 @@
-26/02/2020 - 00:43
+28/02/2020 - 00h15m
 O sistema começa a se tornar funcional, é necessário complementar recursos de edição.
 
     Até o momento, o sistema conta com cadastro de usuários a partir de um e-mail com senha.
@@ -15,7 +15,13 @@ O sistema começa a se tornar funcional, é necessário complementar recursos de
     - Editar as classes:
         - Recursos visuais como nome e descrição de atributos;
     - Editar Raças: Apenas o nome;
-    - Editar Armas;
+    - Editar Armas:
+        - Ajustar para caber classe que pode usar a arma;
+    - Editar Defesas;
+        - Ajustar para caber classe que pode usar a arma;
+    - Editar Skills:
+        - Ajustes da skill;
+        - Filtro por classe;
 
 Na próxima jornada, o objetivo é concluir as partes de edições de conteúdo para os tópicos:
 
