@@ -16,18 +16,51 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="ArmaEditar" value="<?php echo $ResArmas['id_item_arma']?>">
-                    <div class="col-md-12">
+                    <div class="col-md-8">
                         <label for="NomeArma">Nome da Arma</label>
                         <input type="text" class="form-control" name="NomeArma" id="NomeArma" value="<?php echo $ResArmas['descricao_item_arma']?>">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="CustoArma">Preço</label>
+                        <input type="number" class="form-control" name="CustoArma" id="CustoArma" value="<?php echo $ResArmas['custo_item_arma']?>">
                     </div>
                     <div class="clearfix"></div>
                     <div class="col-md-4">
                         <label for="TipoArma">Tipo</label>
-                        <input type="text" class="form-control" name="TipoArma" id="TipoArma" value="<?php echo $ResArmas['tipo_item_arma']?>">
+                        <select name="TipoArma" id="TipoArma" class="form-control">
+                        <?php
+                            $QueryBuscarTipos = "SELECT * FROM tb_tipo_itens";
+                            $ExeQrBuscarTipos = mysqli_query($connection, $QueryBuscarTipos);
+                            foreach($ExeQrBuscarTipos as $TiposArmas):
+                            ?>
+                            <option value="<?php echo $TiposArmas['tipo_item']?>">
+                                <?php echo $TiposArmas['tipo_item']?>
+                            </option>
+                            <?php
+                            endforeach;
+                        ?>
+                        </select>
                     </div>
                     <div class="col-md-4">
                         <label for="ClasseArma">Classe</label>
-                        <input type="text" class="form-control" name="ClasseArma" id="ClasseArma" value="<?php echo 'Classe->implementar'; ?>">
+                        <?php $IdClasseArma = $ResArmas['classe_item_arma'];?>
+                        <select name="ClasseArma1" id="ClasseArma1" class="form-control">
+                            <?php
+                            //Buscar Classe da arma
+                            $QueryBuscarArmaClasse = "SELECT DISTINCT * FROM tb_classes";
+                            $ExeQrBuscarArmaClasse = mysqli_query($connection, $QueryBuscarArmaClasse);
+                            foreach($ExeQrBuscarArmaClasse as $ArmaClasse):
+                                ?>
+                                <option value="<?php echo $ArmaClasse['id_classe']; ?>">
+                                   <?php 
+                                    echo $ArmaClasse['nome_classe']; 
+                                    ?>
+                                </option>
+                                <?php
+                            endforeach;
+                            
+                            ?>
+                        </select>
                     </div>
                     
                     <div class="col-md-4">

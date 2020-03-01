@@ -20,6 +20,7 @@ if($_SESSION['Login']['nivel_usuario'] == 1){
     INNER JOIN tb_levels xp
         ON p.lv_player = xp.id_level
     ";
+    
 }else{
     $QueryBuscarPlayers = "
     SELECT 
@@ -63,7 +64,12 @@ if($ExeQrBuscarPlayers = mysqli_query($connection, $QueryBuscarPlayers)){
             ?>
         <tr>
             <td><?php echo $Players['id_player']?></td>
-            <td><?php echo $Players['nome_player']?></td>
+            <td>
+            <?php
+                
+                echo $Players['nome_player']
+            ?>
+            </td>
             <td><?php echo $Players['personagem_player']?></td>
             <td><?php echo $Players['nome_classe']?></td>
             <td><?php echo $Players['lv_player']?></td>

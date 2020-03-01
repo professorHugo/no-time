@@ -1,12 +1,13 @@
 <?php
 if(isset($_GET['C'])){
     require '../../configurations/config.php';
+    $ClasseEscolhida = $_GET['C'];
     sleep(2);
-    $QueryBuscarArmas1 = "SELECT * FROM tb_item_armas";
+    $QueryBuscarArmas1 = "SELECT * FROM tb_item_armas WHERE (classe_item_arma = 1 OR classe_item_arma = '$ClasseEscolhida') AND criacao = 1";
     $ExeQrBuscarArmas1 = mysqli_query($connection, $QueryBuscarArmas1);
     $ResQrBuscarArmas1 = mysqli_num_rows($ExeQrBuscarArmas1);
     
-    $QueryBuscarArmas2 = "SELECT * FROM tb_item_armas";
+    $QueryBuscarArmas2 = "SELECT * FROM tb_item_armas WHERE (classe_item_arma = 1 OR classe_item_arma = '$ClasseEscolhida') AND criacao = 1";
     $ExeQrBuscarArmas2 = mysqli_query($connection, $QueryBuscarArmas2);
     $ResQrBuscarArmas2 = mysqli_num_rows($ExeQrBuscarArmas2);
     

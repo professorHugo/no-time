@@ -1,5 +1,4 @@
 <?php
-echo "<h2>Habilidades</h2>";
 $QueryBuscarHabilidades = "
     SELECT * FROM 
         tb_lista_habilidades
@@ -13,6 +12,7 @@ $QueryBuscarHabilidades = "
         OR id_habilidade = $ResPlayers[habilidade7]
         OR id_habilidade = $ResPlayers[habilidade8]
         OR id_habilidade = $ResPlayers[habilidade9]
+    LIMIT 1,10
     ";
 
 $ExeQrBuscarHabilidades = mysqli_query($connection, $QueryBuscarHabilidades);
@@ -20,9 +20,9 @@ $ResQrBuscarHabilidades = mysqli_num_rows($ExeQrBuscarHabilidades);
 
 if($ResQrBuscarHabilidades > 0){
     ?>
-    <table border="1" width="100%">
+    <h4>Habilidades</h4>
+    <table border="1" class="table table-bordered">
         <tr>
-            <td>Id</td>
             <td>Habilidade</td>
             <td>Dificuldade</td>
             <td>Dano/Precisão</td>
@@ -33,7 +33,6 @@ if($ResQrBuscarHabilidades > 0){
         ?>
         
         <tr>
-            <td><?php echo $HabilidadesPlayer['id_habilidade'] ?></td>
             <td><?php echo $HabilidadesPlayer['habilidade']?></td>
             <td><?php echo $HabilidadesPlayer['dif_habilidade']?></td>
             <td><?php echo $HabilidadesPlayer['dano_habilidade']?></td>

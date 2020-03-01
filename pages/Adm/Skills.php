@@ -1,6 +1,12 @@
 <?php
-    if(isset($_POST['SkillFiltro'])){
-        $Filtro = $_POST['SkillFiltro'];
+    if(isset($_GET['SkillFiltroS'])){
+        if(isset($_POST['SkillFiltro'])){
+            $Filtro = $_POST['SkillFiltro'];
+        }
+        
+        if(isset($_GET['R'])){
+            $Filtro = $_GET['R'];
+        }
         $QueryBuscarTodasSkills = "SELECT * FROM tb_lista_habilidades WHERE classe_hab = '$Filtro'";
         $ExeQrBuscarTodasSkills = mysqli_query($connection, $QueryBuscarTodasSkills);
         $ResQrBuscarTodasSkills = mysqli_num_rows($ExeQrBuscarTodasSkills);
@@ -13,8 +19,8 @@
     
 
 ?>
-<div class="col-md-3"  style="position:fixed; bottom: 5%">
-    <form action="?url=Administrar&T=Skills" method="post">
+<div class="col-md-3" style="position:fixed; bottom: 5%">
+    <form action="?url=Administrar&T=Skills&SkillFiltroS" method="post">
        <label for="SkillFiltro">Escolha a classe para filtrar</label>
         <div class="col-md-7 form-group">
             <select name="SkillFiltro" id="SkillFiltro" class="form-control">
@@ -39,7 +45,7 @@
         
     </form>
 </div>
-<div class="col-md-6 col-md-push-3">
+<div class="col-md-6 col-md-push-4">
     <table class="table table-hover">
         <tr style="background-color:#666">
             <td>Id</td>
@@ -49,9 +55,9 @@
             <td class="text-center">Editar</td>
         </tr>
         <?php
-    if($ResQrBuscarTodasSkills > 0){
+        if($ResQrBuscarTodasSkills > 0){
         foreach($ExeQrBuscarTodasSkills as $ResSkills):
-            ?>
+        ?>
         <tr>
             <td style="background-color:#666"> <?php echo $ResSkills['id_habilidade']?> </td>
             <td><?php echo $ResSkills['classe_hab']?></td>

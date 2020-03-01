@@ -22,7 +22,11 @@
         ";
 
         if(mysqli_query($connection, $QueryEditarClasse)){
-            echo "Editado com sucesso!<br>Inserir Modal";
+            echo "
+                Editado com sucesso!<br>Inserir Modal
+                <meta http-equiv='refresh' content='0;?url=Administrar&T=Skills&SkillFiltroS&R=$ClasseSkill' />
+            ";
+            
         }else{
             echo "Erro".mysqli_error($connection);
         }   

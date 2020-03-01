@@ -15,10 +15,12 @@ O sistema começa a se tornar funcional, é necessário complementar recursos de
     - Editar as classes:
         - Recursos visuais como nome e descrição de atributos;
     - Editar Raças: Apenas o nome;
-    - Editar Armas:
-        - Ajustar para caber classe que pode usar a arma;
+    - Armas:
+        -Permitido classes;
+        -Permitido Adicionar;
     - Editar Defesas;
         - Ajustar para caber classe que pode usar a arma;
+    - Adicionar História do personagem após a criação;
     - Editar Skills:
         - Ajustes da skill;
         - Filtro por classe;
@@ -27,12 +29,12 @@ Na próxima jornada, o objetivo é concluir as partes de edições de conteúdo 
 
     - Finalizar as edições de recursos do sistema;
     - Adicionar Capitulos ao jogo;
-    - Adicionar História do personagem (criar nova tabela no banco de dados);
+    
     - Adicionar Classes;
     - Adicionar Raças:
         - Ajustar Banco de dados para inserir descrições das raças;
     - Adicionar Equipamentos
-        - Armas e Defesas;
+        - Defesas;
     - Adicionar Skills;
     
 

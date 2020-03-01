@@ -15,7 +15,7 @@
     $ExeQrBuscarDef = mysqli_query($connection, $QueryBuscarDef);
     $ResQrBuscarDef = mysqli_num_rows($ExeQrBuscarDef);
 ?>
-<!--Modal para cadastro do aluno novo-->
+<!--Modal para cadastro do usuário novo-->
 <div class="modal fade in" id="Criar-Conta" tabindex="-1" role="dialog" aria-labelledby="Cadastro-Player" style="">
     <form action="#" method="post" class="">
         <div class="modal-dialog">

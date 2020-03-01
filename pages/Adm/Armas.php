@@ -1,10 +1,55 @@
 <?php
-    $QueryBuscarTodasArmas = "SELECT * FROM tb_item_armas";
-    $ExeQrBuscarTodasArmas = mysqli_query($connection, $QueryBuscarTodasArmas);
-    echo $ResQrBuscarTodasArmas = mysqli_num_rows($ExeQrBuscarTodasArmas);
+    if(isset($_POST['ArmaFiltro'])){
+        $FiltroArma = $_POST['ArmaFiltro'];
+        $QueryBuscarTodasArmas = "SELECT * FROM tb_item_armas WHERE tipo_item_arma = '$FiltroArma'";
+        $ExeQrBuscarTodasArmas = mysqli_query($connection, $QueryBuscarTodasArmas);
+        $ResQrBuscarTodasArmas = mysqli_num_rows($ExeQrBuscarTodasArmas);
+    }else{
+        $QueryBuscarTodasArmas = "SELECT * FROM tb_item_armas";
+        $ExeQrBuscarTodasArmas = mysqli_query($connection, $QueryBuscarTodasArmas);
+        $ResQrBuscarTodasArmas = mysqli_num_rows($ExeQrBuscarTodasArmas);
+    }
 
+if(isset($_GET['Adicionar'])) {
+    include 'pages/Adm/Extra/SalvarEquipamento.php';
+}
+    
 ?>
-<div class="col-md-6 col-md-push-3">
+<div class="col-md-3">
+    <div class="col-md-10">
+        <a href="#" data-toggle="modal" data-target="#AdicionarEquipamento" class="form-control">
+            <span class="glyphicon glyphicon-plus">Adicionar</span>
+        </a>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-md-10" style="margin-top:10px;">
+        <form action="?url=Administrar&T=Armas" method="post">
+            <label for="ArmaFiltro">Escolha a classe para filtrar</label>
+            <div class="col-md-7 form-group">
+                <select name="ArmaFiltro" id="" class="form-control">
+                    <option value="0" disabled selected>Filtro</option>
+                    <?php
+                    $QueryBuscarClassesFiltroA = "SELECT * FROM tb_item_armas";
+                    $ExeQrBuscarClassesFiltroA = mysqli_query($connection, $QueryBuscarClassesFiltroA);
+                    foreach($ExeQrBuscarClassesFiltroA as $FiltroClasseA):
+                    ?>
+                        <option value="<?php echo $FiltroClasseA['tipo_item_arma']?>">
+                            <?php echo $FiltroClasseA['tipo_item_arma']?>
+                        </option>
+                        <?php
+                    endforeach;
+            
+            ?>
+                </select>
+            </div>
+            <div class="formgroup">
+                <input type="submit" class="btn btn-success">
+            </div>
+
+        </form>
+    </div>
+</div>
+<div class="col-md-8 col-md-push-1">
     <table class="table table-hover">
         <tr style="background-color:#666">
             <td>Id</td>
@@ -19,8 +64,8 @@
             ?>
         <tr>
             <td style="background-color:#666"> <?php echo $ResArmas['id_item_arma']?> </td>
-            <td><?php echo $ResArmas['tipo_item_arma']?></td>
-            <td><?php echo $ResArmas['descricao_item_arma']?></td>
+            <td><?php echo lmWord($ResArmas['tipo_item_arma'])?></td>
+            <td><?php echo lmWord($ResArmas['descricao_item_arma'],16)?></td>
             <td class="text-center">
                 <a href="#" data-toggle="modal" data-target="#VisualizarArma<?php echo $ResArmas['id_item_arma']?>"><i class="glyphicon glyphicon-eye-open"></i></a>
             </td>
@@ -36,3 +81,4 @@
 ?>
     </table>
 </div>
+<?php include 'parts/Modals/Extra/AdicionarEquipamento.php';

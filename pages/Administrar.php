@@ -20,7 +20,7 @@
         include 'pages/Adm/Editar-Skill.php';
     }
 ?>
-<div class="row">
+<div class="row" style="margin-bottom: 20px">
     <div class="col-md-1"></div>
     <div class="col-md-2 chamada-item">
         <a href="?url=Administrar&T=Classes">
@@ -54,6 +54,7 @@
     </div>
     <div class="col-md-1"></div>
 </div>
+<div class="clearfix"></div>
 <?php
     if(isset($_GET['T'])){
         $UrlAdm = $_GET['T'];

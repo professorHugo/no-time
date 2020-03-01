@@ -1,7 +1,6 @@
 <?php
 
 #Buscar as armas conforme quantidade
-echo "<h2>Armas: </h2>";
 $QueryBuscarArmas = "
     SELECT * FROM 
         tb_item_armas 
@@ -18,9 +17,20 @@ $ExeQrBuscarArmas = mysqli_query($connection, $QueryBuscarArmas);
 $ResQrBuscarArmas = mysqli_num_rows($ExeQrBuscarArmas);
 
 if($ResQrBuscarArmas > 0){
+    ?>
+
+<h4 class="text-center">Armas</h4>
+<hr>
+<p style="font-size:12px">
+    <?php
     while($ArmasPlayer = mysqli_fetch_assoc($ExeQrBuscarArmas)){
         echo 
-            "Arma: " . $ArmasPlayer['descricao_item_arma']." | Tipo: " .$ArmasPlayer['tipo_item_arma']." | Dano: " . $ArmasPlayer['dano_item_arma'];
+           lmWord($ArmasPlayer['descricao_item_arma'],16)." | " .$ArmasPlayer['tipo_item_arma']." | Dano: " . $ArmasPlayer['dano_item_arma'];
         echo "<br>";
     }
+    ?>
+</p>
+<div class="clearfix" style="margin-bottom:25px"></div>
+
+<?php
 }

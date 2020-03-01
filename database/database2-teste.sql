@@ -11,7 +11,7 @@ create table tb_lista_habilidades(
     habilidade varchar(255),
     dif_habilidade int,
     dano_habilidade int,
-    descricao_habilidade varchar(255)
+    descricao_habilidade varchar(1000)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 #Dados das Habilidades
@@ -33,55 +33,56 @@ INSERT INTO tb_lista_habilidades(
     descricao_habilidade
 )
 VALUES
-(1,"Escolha a habilidade",0,0,"------------"),
-(1,'Criar Arma Pequena',21,28,'Criar uma arma ao gosto do player, depende dos pontos de criação'),
-(1,'Criar Arma Média',22,29,'Criar uma arma ao gosto do player, depende dos pontos de criação'),
-(1,'Criar Bomba C4',23,31,'Criar uma bomba de explosão de médio alcance'),
-(1,'Criar Bomba de Nitrogênio Líquido',24,32,'Cria uma bomba de Nitrogênio Líquido, permite congelar (D2), oponente pode perder 2 rodadas (D2)'),
-(1,'Criar Arma Grande',25,33,'Criar arma a gosto do player'),
-(1,'Criar Bomba Termo Nuclear',30,40,'Cria uma bomba de explosão Termo Nuclear (precisa 3 rodadas para detonação)'),
-(2,"Escolha a habilidade",0,0,"------------"),
-(2,'Negociar', 21,28,'Iniciar negociação com algum indivíduo'),
-(2,'Suborno', 22,29,'Subornar alguém para conseguir informações'),
-(2,'Comprar com Desconto', 23,31,'Efetuar compra de qualquer coisa com descontos'),
-(2,'Golpista', 30,40,'Faz com que o inimigo acredite em qualquer história'),
-(3,"Escolha a habilidade",0,0,"------------"),
-(3,'Furto Rápido', 21,28,'Tentar furtar itens de pequeno valor'),
-(3,'Assalto', 22,29,'Faz um assalto, tentando não chamar a atenção'),
-(3,'Chantagear', 23,31,'Chantagear qualquer personagem, tanto NPC quanto Player'),
-(3,'Roubo Planejado', 24,32,'Pontos de Furto +3'),
-(3,'Jogada de Mestre', 30,40,'Pontos de Furto +10'),
-(4,"Escolha a habilidade",0,0,"------------"),
-(4,'Ataque Furtivo', 21,28,'Iniciar um ataque furtivo, usando até 2 golpes, ATK + 3'),
-(4,'Ataque Acrobata', 22,29,'O usuário faz acrobacias para atingir o inimigo ganhando VEL + 2'),
-(4,'Ataque com arma branca', 23,31,'O usuário usa um ataque mais eficiente com armas Brancas, VEL+2 2Rodadas'),
-(4,'Ataque com perícia', 24,32,'O usuário ataca usando mais perícia, ATK+3 2Rodadas'),
-(4,'Destruidor de Corações', 35,47,'O usuário ataca diretamente o coração do inimigo arrancando de seu interior (instant kill)'),
-(5,"Escolha a habilidade",0,0,"------------"),
-(5,'Controlar Máquina', 21,28,'O usuário pode controlar quaisquer tipos de máquinas'),
-(5,'Hackear', 22,29,'O usuário pode invadir qualquer sistema de tecnologia'),
-(5,'Descriptografar', 23,31,'Remover criptogravia de qualquer sistema de acesso'),
-(5,'Invasão', 24,32,'O hacker pode invadir o sistema para roubar informações, PER+2'),
-(5,'Black out', 30,40,'O Hacker pode causar um Black out em todo o sistema, PER+5'),
-(6,"Escolha a habilidade",0,0,"------------"),
-(6,'Dar Fuga (terrestre)', 21,28,'O piloto poderá desviar de qualquer perseguidor'),
-(6,'Ligação Direta', 22,29,'O piloto poderá fazer ligação direta de energia em veículos terrestres'),
-(6,'Desvio Rápido (aéreo)', 23,31,'O piloto poderá desviar usando veículos aéreos'),
-(6,'Fuga de Mestre', 30,40,'O piloto conseguirá fugir de quaisquer perseguidores (terrestre e/ou aéreo)'),
-(7,"Escolha a habilidade",0,0,"------------"),
-(7,'Pick Lock', 21,28,'Abre qualquer tipo de fechadura e porta eletrônica'),
-(7,'Disfarçar', 22,29,'Faz um disfarce simples para fugir de alguma situação'),
-(7,'Distrair', 23,31,'Chama a atenção para outras coisas e situações'),
-(7,'Esconder', 24,32,'Esconder-se em algum lugar para fugir'),
-(7,'Disguise Kit', 30,40,'Faz a transformação completa do usuário, incluindo voz, altura, peso e demais atributos...'),
-(8,"Escolha a habilidade",0,0,"------------"),
-(8,'Tiro Duplo', 21,28,'Atira duas vezes simultâneas'),
-(8,'Tiro Triplo', 21,28,'Atira três vezes simultâneas'),
-(8,'Aumento de Precisão', 21,28,'Aumenta a precisão para tentar um Head Shot'),
-(8,'One Shot One Kill', 21,28,'Head Shot certeiro'),
-(8,'Multiple Kill', 21,28,'Espera os inimigos se alinharem para atirar em até 3 Inimigos simultâneamente'),
-(8,'SNIPER Profissional', 21,28,'PRECIS+5, VEL+3')
-;
+(0, 'Bloqueado', 0, 0, 'Aumente seu level para desbloquear'),
+(1, 'Escolha a Classe', 0, 0, '------------'),
+(2, 'Escolha a Classe', 0, 0, '------------'),
+( 2, 'Criar Arma Pequena', 21, 28, 'Criar uma arma ao gosto do player de porte pequeno ou de curto alcance, depende dos pontos de criaÃ§Ã£o. Esse equipamento pode ser usado e categorizado no catÃ¡logo de itens do sistema do jogo para ser usado por outros players da campanha atual.'),
+(2, 'Criar Arma MÃ©dia', 22, 29, 'Criar uma arma ao gosto do player de mÃ©dio porte ou de mÃ©dia distÃ¢ncia como espingardas, depende dos pontos de criaÃ§Ã£o.  Esse equipamento pode ser usado e categorizado no catÃ¡logo de itens do sistema do jogo para ser usado por outros players da campanha atual.'),
+(2, 'Criar Bomba C4', 23, 31, 'Criar uma bomba de explosÃ£o de mÃ©dio alcance.  Esse equipamento pode ser usado e categorizado no catÃ¡logo de itens do sistema do jogo para ser usado por outros players da campanha atual.'),
+(2, 'Criar Bomba de NitrogÃªnio LÃ­quido', 24, 32, 'Cria uma bomba de NitrogÃªnio LÃ­quido, permite congelar (D2), oponente pode perder 2 rodadas (D2).  Esse equipamento pode ser usado e categorizado no catÃ¡logo de itens do sistema do jogo para ser usado por outros players da classe <b>cientista</b> na campanha atual.'),
+(2, 'Criar Arma Grande', 25, 33, 'Criar arma a gosto do player de grande porte ou longo alcance como fuzis.  Esse equipamento pode ser usado e categorizado no catÃ¡logo de itens do sistema do jogo para ser usado por outros players da campanha atual.'),
+(2, 'Criar Bomba Termo Nuclear', 30, 40, 'Cria uma bomba de explosÃ£o Termo Nuclear (precisa 3 rodadas para detonaÃ§Ã£o).'),
+(3, 'Escolha a habilidade', 0, 0, '------------'),
+(3, 'Negociar', 21, 28, 'Iniciar NegociaÃ§Ã£o com algum indivÃ­duo'),
+(3, 'Suborno', 22, 29, 'Subornar alguÃ©m para conseguir informaÃ§Ãµes'),
+(3, 'Comprar com Desconto', 23, 31, 'Efetuar compra de qualquer equipamento de ataque ou defesa com desconto de 50%. Pode comprar itens de recuperaÃ§Ã£o com 75% de descontos'),
+(3, 'Golpista', 30, 40, 'Faz com que o inimigo acredite em qualquer histÃ³ria'),
+(4, 'Escolha a habilidade', 0, 0, '------------'),
+(4, 'Furto RÃ¡pido', 21, 28, 'Faz furtos rÃ¡pidos, conseguindo roubar itens de pequeno valor.'),
+(4, 'Assalto', 22, 29, 'Faz um assalto, evitando chamar atenÃ§Ã£o da polÃ­cia local'),
+(4, 'Chantagear', 23, 31, 'Chantagear qualquer personagem, tanto NPC quanto Player'),
+(4, 'Roubo Planejado', 0, 32, 'Analisa os principais pontos de fracasso em um roubo ou furto, aumentando seus pontos de furto em 3. Pontos de Furto +3. Os pontos de furtos obtidos podem ser usados por mais 1 rodada apÃ³s ganho'),
+(4, 'Jogada de Mestre', 30, 40, 'O auge da carreira como ladrÃ£o. Analisa todos os pontos de um roubo ou furto, aumentando seus pontos de furto em 10. Pontos de Furto +10. Os pontos de furtos obtidos podem ser usados por mais 2 rodadas apÃ³s ganho'),
+(5, 'Escolha a habilidade', 0, 0, '------------'),
+(5, 'Ataque Furtivo', 21, 28, 'Iniciar um ataque furtivo, usando atÃ© 2 golpes, ATK + 3. Os dois golpes acontecem apenas nessa rodada de utilizaÃ§Ã£o da habilidade. O BÃ´nus de atk serÃ¡ usado na prÃ³xima rodada tambÃ©m.'),
+(5, 'Ataque Acrobata', 22, 29, 'O usuÃ¡rio faz acrobacias para atingir o inimigo ganhando VEL + 2. A descriÃ§Ã£o da aÃ§Ã£o pode ser feita pelo player.'),
+(5, 'Ataque com arma branca', 23, 31, 'O usuÃ¡rio usa um ataque mais eficiente com armas Brancas, VEL+2. O bÃ´nus de velocidade poderÃ¡ ser usado por 2 Rodadas'),
+(5, 'Ataque com perÃ­cia', 24, 32, 'O usuÃ¡rio ataca usando mais perÃ­cia, ATK+3. O bÃ´nus de atk poderÃ¡ ser usado por mais 2 rodadas'),
+(5, 'Heartbreaker', 35, 47, 'O usuÃ¡rio ataca diretamente o coraÃ§Ã£o do inimigo arrancando de seu interior. D2 decide para Instant Kill. O usuÃ¡rio tem pode descrever os detalhes da aÃ§Ã£o.'),
+(6, 'Escolha a habilidade', 0, 0, '------------'),
+(6, 'Controlar MÃ¡quina', 21, 28, 'O usuÃ¡rio consegue controlar e manipular mÃ¡quinas. Esse controle nÃ£o precisa estar prÃ³ximo da mÃ¡quina caso a mesma seja pequena. Caso seja uma mÃ¡quina mais complexa, serÃ¡ necessÃ¡rio controle manual via conexÃ£o'),
+(6, 'Hackear', 0, 29, 'O Hacker tem condiÃ§Ãµes de invadir sistemas e fazer alteraÃ§Ãµes que julgar mais conveniente.'),
+(6, 'Descriptografar', 23, 31, 'Remover criptogravia de qualquer sistema de acesso'),
+(6, 'InvasÃ£o', 24, 32, 'O hacker pode invadir o sistema para roubar informaÃ§Ãµes, PER+2'),
+(6, 'Black out', 30, 40, 'O Hacker pode causar um Black out em todo o sistema, PER+5'),
+(7, 'Escolha a habilidade', 0, 0, '------------'),
+(7, 'Dar Fuga (terrestre)', 0, 28, 'O piloto poderÃ¡ desviar de qualquer perseguidor'),
+(7, 'LigaÃ§Ã£o Direta', 22, 29, 'O piloto poderÃ¡ fazer ligaÃ§Ã£o direta de energia em veÃ­culos terrestres'),
+(7, 'Desvio RÃ¡pido (aÃ©reo)', 23, 31, 'O piloto poderÃ¡ desviar usando veÃ­culos aÃ©reos'),
+(7, 'Fuga de Mestre', 30, 40, 'O piloto conseguirÃ¡ fugir de quaisquer perseguidores (terrestre e/ou aÃ©reo)'),
+(8, 'Escolha a habilidade', 0, 0, '------------'),
+(8, 'Pick Lock', 21, 28, 'Abre qualquer tipo de fechadura e porta eletrÃ´nica'),
+(8, 'DisfarÃ§ar', 22, 29, 'Faz um disfarce simples para fugir de alguma situaÃ§Ã£o'),
+(8, 'Distrair', 23, 31, 'Chama a atenção para outras coisas e situações'),
+(8, 'Esconder', 24, 32, 'Esconder-se em algum lugar para fugir'),
+(8, 'Disguise Kit', 30, 40, 'Faz a transformaÃ§Ã£o completa do usuÃ¡rio, incluindo voz, altura, peso e demais atributos...'),
+(9, 'Escolha a habilidade', 0, 0, '------------'),
+(9, 'Tiro Duplo', 21, 28, 'Atira duas vezes simultÃ¢neas'),
+(9, 'Tiro Triplo', 21, 28, 'Atira três vezes simultâneas'),
+(9, 'Aumento de PrecisÃ£o', 0, 28, 'Aumenta a precisÃ£o para tentar um Head Shot'),
+(9, 'One Shot One Kill', 21, 28, 'Head Shot certeiro'),
+(9, 'Multiple Kill', 21, 28, 'Espera os inimigos se alinharem para atirar em atÃ© 3 Inimigos simultÃ¢neamente'),
+(9, 'SNIPER Profissional', 21, 28, 'PRECISÃƒO +5, VEL+3');
 
 #TABELA DE ATRIBUTOS
 create table tb_atributos(
@@ -90,15 +91,15 @@ create table tb_atributos(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(1,'Vida');
-INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(2,'Força');
+INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(2,'ForÃ§a');
 INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(3,'Velocidade');
 INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(4,'Conhecimento');
-INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(5,'Persuasão');
+INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(5,'PersuasÃ£o');
 INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(6,'Furtividade');
-INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(7,'Inteligência');
+INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(7,'InteligÃªncia');
 INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(8,'Reflexo');
 INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(9,'Carisma');
-INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(10,'Precisão');
+INSERT INTO tb_atributos(id_atributo,descricao_atributo)VALUES(10,'PrecisÃ£o');
 
 #TABELA DE HABILIDADES POR CLASSE
 create table tb_habilidades(
@@ -110,9 +111,9 @@ create table tb_habilidades(
 INSERT INTO tb_habilidades(id_habilidade,classe_habilidade,descricao_habilidade)
 VALUES(1,'Cientista','Criatividade');
 INSERT INTO tb_habilidades(id_habilidade,classe_habilidade,descricao_habilidade)
-VALUES(2,'Cientista','Raciocínio');
+VALUES(2,'Cientista','RaciocÃ­nio');
 INSERT INTO tb_habilidades(id_habilidade,classe_habilidade,descricao_habilidade)
-VALUES(3,'Cientista','Inteligência');
+VALUES(3,'Cientista','InteligÃªncia');
 INSERT INTO tb_habilidades(id_habilidade,classe_habilidade,descricao_habilidade)
 VALUES(4,'Cientista','Produzir');
 INSERT INTO tb_habilidades(id_habilidade,classe_habilidade,descricao_habilidade)
@@ -134,67 +135,80 @@ create table tb_classes (
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 INSERT INTO tb_classes(nome_classe, atr1, atr2, atr3, atr4, hab_c1, hab_c2, hab_c3, hab_c4, hab_c5)
-VALUES(
+VALUES
+(
+    'Todas',
+    'Vida',
+    'ForÃ',
+    'Velocidade',
+    '-',
+    '-',
+    '-',
+    '-',
+    '-',
+    '-'
+),
+(
     'Cientista',
     'Vida',
-    'Força',
+    'ForÃ§a',
     'Velocidade',
     'Conhecimento',
     'Criatividade',
-    'Raciocínio',
-    'Inteligencia',
+    'RaciocÃ­nio',
+    'InteligÃªncia',
     'Produzir',
     'Especial'
 ),
 
 (
-    'Empresário',
+    'EmpresÃ¡rio',
     'Vida',
-    'Força',
+    'ForÃ§a',
     'Velocidade',
-    'Persuasão',
-    'Negociação',
+    'PersuasÃ£o',
+    'NegociaÃ§Ã£o',
     'Conhecimento',
-    'Inteligência',
-    'Antecipação',
+    'InteligÃªncia',
+    'AntecipaÃ§Ã£o',
     'Especial'
 ),
 
 (
-    'Ladrão',
+    'LadrÃ£o',
     'Vida',
-    'Força',
+    'ForÃ§a',
     'Velocidade',
     'Furtividade',
     'Destreza',
     'Furto',
     'Extorsão',
-    'Lábia',
+    'LÃ¡bia',
     'Especial'
 ),
 
 (
     'Assassino',
     'Vida',
-    'Força',
+    'ForÃ§a',
     'Velocidade',
     'Furtividade',
     'Destreza',
-    'Inteligência',
+    'InteligÃªncia',
     'Carisma',
-    'Persuasão',
+    'PersuasÃ£o',
     'Especial'
 ),
 
 (
     'Hacker',
     'Vida',
-    'Força',
+    'ForÃ§a',
     'Velocidade',
-    'Inteligência',
+    'InteligÃªncia',
     'Programação',
-    'Raciocínio',
-    'Lábia',
+    'RaciocÃ­nio',
+    'LÃ¡bia',
     'Agilidade',
     'Especial'
 ),
@@ -202,12 +216,12 @@ VALUES(
 (
     'Piloto',
     'Vida',
-    'Força',
+    'ForÃ§a',
     'Velocidade',
     'Reflexo',
     'Conhecimento',
-    'Inteligência',
-    'Raciocínio',
+    'InteligÃªncia',
+    'RaciocÃ­nio',
     'Agilidade',
     'Especial'
 ),
@@ -215,26 +229,26 @@ VALUES(
 (
     'Contrabandista',
     'Vida',
-    'Força',
+    'ForÃ§a',
     'Velocidade',
     'Carisma',
     'Carisma',
-    'Negociação',
-    'Inteligência',
-    'Antecipação',
+    'NegociaÃ§Ã£o',
+    'InteligÃªncia',
+    'AntecipaÃ§Ã£o',
     'Especial'
 ),
 
 (
     'Atirador',
     'Vida',
-    'Força',
+    'ForÃ§a',
     'Velocidade',
     'Precisão',
     'Furtividade',
     'Destreza',
     'Conhecimento',
-    'Inteligência',
+    'InteligÃªncia',
     'Especial'
 );
 
@@ -269,24 +283,45 @@ INSERT INTO tb_itens_consumiveis(
     descricao_item_consumivel, 
     quantidade_max_item_consumivel
 )VALUES
-(1, "Capsula de Nano Robôs, recupera 25hp", 10);
+(1, "Capsula de Nano RobÃ´s, recupera 25hp", 10);
+
+#TABELA DE TIPO DE ITENS
+CREATE TABLE tb_tipo_itens(
+    id_item int primary key auto_increment,
+    tipo_item varchar(255)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
+INSERT INTO tb_tipo_itens(tipo_item)VALUES('Vazio'),('Proximidade'),('Curto AlcanÃ§e'),('MÃ©dio AlcanÃ§e'),('Longo AlcanÃ§e');
 
 #TABELA DOS ITENS DE ATK
 CREATE TABLE tb_item_armas(
     id_item_arma int primary key auto_increment,
     descricao_item_arma varchar(255),
     tipo_item_arma varchar(255),
+    classe_item_arma int,
+    criacao int default 0,
+    custo_item_arma int,
     dano_item_arma int
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
+
+CREATE TABLE tb_historias(
+    id_historia int primary key auto_increment,
+    id_player int,
+    texto_historia text
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
 INSERT INTO tb_item_armas(
     descricao_item_arma,
     tipo_item_arma,
+    classe_item_arma,
+    criacao,
+    custo_item_arma,
     dano_item_arma
 )VALUES
-("-","-",0),
-("Faca de combate de Aço Inoxidável", "Proximidade", 1),
-("Pistola .45 com munição de chumbo", "Disparo Curto", 2);
+("MÃ£os Vazias","Vazio", 1, 1, 0, 0),
+("Faca de combate de AÃ§o InoxidÃ¡vel", "Proximidade", 1, 1, 0, 1),
+("Pistola .45 com muniÃ§Ã£o de chumbo", "Disparo Curto", 1, 1, 0, 2),
+('Espingarda Boito ReÃºna Standard Calibre 12', 'MÃ©dio AlcanÃ§e', 9, 0, 3200, 3),
+('Rifle CBC 8122 Bolt Action Oxidada .22', 'Longo AlcanÃ§e', 9, 0, 2500, 4);
 
 
 #TABELA DOS ITENS DE DEFESA
@@ -312,6 +347,7 @@ CREATE TABLE tb_usuarios(
     nome_usuario varchar(255),
     email_usuario varchar(255),
     senha_usuario varchar(255),
+    lv_usuario int default 1,
     nivel_usuario int default "0"
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
@@ -382,3 +418,21 @@ CREATE TABLE tb_players(
     FOREIGN KEY (habilidade8) REFERENCES tb_lista_habilidades(id_habilidade),
     FOREIGN KEY (habilidade9) REFERENCES tb_lista_habilidades(id_habilidade)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
+
+INSERT INTO `tb_usuarios` (`id_usuario`, `nome_usuario`, `email_usuario`, `senha_usuario`, `lv_usuario`, `nivel_usuario`) VALUES
+(1, 'Hugo Christian Pereira Gomes', 'hugo.allnet@gmail.com', '123456', 1, 1),
+(2, 'Ricardo Gasparac', 'ricardo@notime.com.br', '123456', 1, 0),
+(3, 'Davi Paiva', 'davipv09@gmail.com', '123456', 1, 0),
+(4, 'Ismael Macedo', 'ismael@notime.com.br', '123456', 1, 0),
+(5, 'Allan', 'allan@notime.com.br', '123456', 1, 0),
+(6, 'Israel', 'israel@notime.com.br', '123456', 1, 0),
+(7, 'Diogo', 'diogo@notime.com.br', '123456', 1, 0);
+
+
+INSERT INTO `tb_players` (`id_player`, `nome_player`, `personagem_player`, `raca_player`, `classe_player`, `xp_player`, `lv_player`, `atk_player`, `hab_player`, `atr1_titulo`, `atr1_v`, `atr2_titulo`, `atr2_v`, `atr3_titulo`, `atr3_v`, `atr4_titulo`, `atr4_v`, `hab1_titulo`, `hab1_v`, `hab2_titulo`, `hab2_v`, `hab3_titulo`, `hab3_v`, `hab4_titulo`, `hab4_v`, `hab5_titulo`, `hab5_v`, `arma1_player`, `arma2_player`, `arma3_player`, `arma4_player`, `arma5_player`, `def1_player`, `def2_player`, `def3_player`, `habilidade1`, `habilidade2`, `habilidade3`, `habilidade4`, `habilidade5`, `habilidade6`, `habilidade7`, `habilidade8`, `habilidade9`) VALUES
+(1, 2, 'Alexander Payne', 1, 2, 0, 1, 0, 0, 'Vida', 30, 'ForÃ§a', 15, 'Velocidade', 20, 'Conhecimento', 35, 'Criatividade', 16, 'RaciocÃ­nio', 24, 'InteligÃªncia', 20, 'Produzir', 10, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 5, 6, 1, 1, 1, 1, 1, 1, 1),
+(2, 6, 'Androide 18', 2, 7, 0, 1, 0, 0, 'Vida', 40, 'ForÃ§a', 20, 'Velocidade', 20, 'Reflexo', 20, 'Conhecimento', 15, 'InteligÃªncia', 15, 'RaciocÃ­nio', 20, 'Agilidade', 20, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 35, 38, 1, 1, 1, 1, 1, 1, 1),
+(3, 4, 'Vulpis', 1, 6, 0, 1, 0, 0, 'Vida', 37, 'ForÃ§a', 15, 'Velocidade', 18, 'InteligÃªncia', 30, 'Programaï¿½ï¿½o', 25, 'RaciocÃ­nio', 25, 'LÃ¡bia', 10, 'Agilidade', 10, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 29, 31, 1, 1, 1, 1, 1, 1, 1),
+(4, 3, 'Shelbi-1.0', 2, 4, 0, 1, 0, 0, 'Vida', 42, 'ForÃ§a', 15, 'Velocidade', 20, 'Furtividade', 23, 'Destreza', 10, 'Furto', 25, 'Extorsï¿½o', 5, 'LÃ¡bia', 30, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 17, 18, 1, 1, 1, 1, 1, 1, 1),
+(5, 7, 'Minimus', 1, 5, 0, 1, 0, 0, 'Vida', 45, 'ForÃ§a', 12, 'Velocidade', 22, 'Furtividade', 21, 'Destreza', 25, 'InteligÃªncia', 15, 'Carisma', 10, 'PersuasÃ£o', 20, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 23, 25, 1, 1, 1, 1, 1, 1, 1),
+(6, 5, 'Dante', 1, 9, 0, 1, 0, 0, 'Vida', 45, 'ForÃ§a', 15, 'Velocidade', 20, 'Precisï¿½o', 20, 'Furtividade', 13, 'Destreza', 15, 'Conhecimento', 17, 'InteligÃªncia', 25, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 48, 49, 1, 1, 1, 1, 1, 1, 1);

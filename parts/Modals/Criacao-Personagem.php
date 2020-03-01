@@ -1,5 +1,5 @@
 <?php
-    $QueryBuscarClasses = "SELECT * FROM tb_classes";
+    $QueryBuscarClasses = "SELECT * FROM tb_classes LIMIT 1, 100";
     $ExeQrBuscarClasses = mysqli_query($connection, $QueryBuscarClasses);
     $ResQrBuscarClasses = mysqli_num_rows($ExeQrBuscarClasses);
     
