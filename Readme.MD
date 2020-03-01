@@ -6,6 +6,7 @@ Recursos disponíveis:
         Usuário inicial tem nível de permissão 0.     
             - Pode adicionar seus personagens;
             - Pode visualizar seus personagens;
+            - Visualização da História e seus capítulos;
         Nível 1 de permissão:
             - Editar as classes:
                 - Recursos visuais como nome e descrição de atributos;
@@ -19,6 +20,8 @@ Recursos disponíveis:
             - Editar Skills:
                 - Ajustes da skill;
                 - Filtro por classe;
+            - História e Capítulos:
+                -Adicionar e visualizar História;
 
 Próximas Jornadas:
 

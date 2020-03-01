@@ -182,7 +182,7 @@ VALUES
     'Furtividade',
     'Destreza',
     'Furto',
-    'Extorsão',
+    'ExtorsÃ£o',
     'LÃ¡bia',
     'Especial'
 ),
@@ -309,6 +309,11 @@ CREATE TABLE tb_historias(
     texto_historia text
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
+INSERT INTO `tb_historias` (`id_historia`, `id_player`, `texto_historia`) VALUES
+(1, 2, 'Dr Alexandre Payne - Dexter\r\n\r\nUm cientista que trabalhava para o governo, foi expulso por nÃ£o ter limites, para ele conhecimento Ã© conhecimento nÃ£o importa a origem, se Ã© mÃ¡gico, extraterrestre ou cientÃ­fico. Conhecimento Ã© poder, Ã© sua frase\r\nUm cara que coloca o bem dos amigos acima de tudo, por ver nos amigos a famÃ­lia que ele nunca teve.\r\nFaz qualquer coisa para defender seus ideais, para ele nÃ£o hÃ¡ limites, quando o assunto Ã© defender o que ele acredita ou as pessoas que ele gosta.\r\nLonge dos cientistas tradicionais, ele tem uma grande habilidade em comunicaÃ§Ã£o, sociÃ¡vel e utiliza dessas caracterÃ­sticas para conquistar a confianÃ§a e convencer as pessoas a fazer as coisas.'),
+(2, 3, 'Shelby-1.0\r\n\r\nnessa Ã©poca androides eram feitos apenas para servir os humanos e descartados como lixo.\r\nnÃ³s Androides sempre executamos qualquer tarefa bem melhor do que eles; o crime sÃ³ crescia e com a 6 revoluÃ§Ã£o industrial o submundo do crime tinha mais poder sobre a cidade do que a prÃ³pria polÃ­cia. aÃ­ que eu entro.\r\nfui o primeiro de uma tropa de elite de androides designados ao policiamento nas ruas e em operaÃ§Ãµes que nenhum humano sairia vivo.\r\nfuncionamos por algum tempo, mas a opiniÃ£o pÃºblica e os direitos humanos eram contrÃ¡rios a androides "matando bandidos por aÃ­".\r\nalegavam que Ã©ramos muito violentos, frios e nÃ£o nos consideravam gente.\r\numa noite eu voltava pra casa e passei por uma manifestaÃ§Ã£o do movimento anti-androides. me atiraram pedras e me atacaram com barras de ferro. nÃ£o reagi, pois androides nÃ£o podem atacar civis humanos, mas sobrevivi. \r\nna manhÃ£ seguinte, eu e todo o meu esquadrÃ£o fomos enviados para uma "missÃ£o importante", uma emboscada nos aguardava e o que nÃ£o sabÃ­amos foi que fomos enviados para sermos destruÃ­dos por sermos perigosos e violentos de mais para continuar atuando.\r\nsÃ³ eu fugi. \r\nassisti todos os meus compatriotas serem assassinados e transformados em blocos de titÃ¢nio. \r\ndesde entÃ£o vivo do crime, pois Ã© o Ãºnico mercado que aceita qualquer um e as margens da sociedade.\r\n sou o primeiro e hoje o Ãºnico Shelby vivo. se descobrirem que ainda resta um de nÃ³s, vÃ£o me matar. que tentem'),
+(3, 7, 'MINIMUS- O ASSASINO A PREÃ‡O FIXO\r\n\r\n\r\nMINIMUS UM CARA NÃƒO AMIGÃVEL \r\nDEVIDO AOS ACONTECIMENTOS \r\nEM SUA VIDA ACABOU SENDO A PESSOA MAIS FRIA E INSANA POSSÃVEL\r\n,DEVIDO AO DANO CAUSADO DA GUERRA QUE FEZ PERDER O SEU BEM MAIS PRECIOSO QUE ERAM SUA FILHA E SUA ESPOSA JANNY, \r\nVOLTOU ATRÃS DE VINGANÃ‡A POR TODO O DANO CAUSADO A VIDA DELE\r\nO SEU NOME REAL ERA BARRY,\r\n MAS FOI APELIDADO DE MINIMUS POIS ELE TINHA CAPACIDADE DE MATAR O SEU ALVO EM UM GOLPE OU COMO ESTAMOS ACOSTUMADOS A CHAMAR  O FAMOSO HIT KILL.\r\nO SEU TREINAMENTO VEIO ATRAVÃ‰S DE UM EX MILITAR DO EXÃ‰RCITO QUE SE CONSIENTIZOU COM O SOFRIMENTO DO HOMEM , \r\nE ASSIM  O AJUDOU A SE TORNAR O FAMOSO ASSASINO A PREÃ‡O FIXO,AGORA MINIMUS ESTÃ ATRÃS DE VINGANÃ‡A E SEM O MINIMO DE PIEDADE,\r\n A PARTE HUMANA DELE MORREU JUNTO COM SUA FAMÃLIA, O QUE  RESTOU FOI APENAS O Ã“DIO E SEDE  DE VINGANÃ‡A.\r\n');
+
 INSERT INTO tb_item_armas(
     descricao_item_arma,
     tipo_item_arma,
@@ -340,8 +345,15 @@ INSERT INTO tb_item_def(
 ("-","-",0),
 ("Colete a prova de balas", "Defesa", 1);
 
-#Tabela de Usuarios#
+#Tabela de Capitulos#
+CREATE TABLE tb_capitulos_historia(
+    id_capitulo int primary key auto_increment,
+    titulo_capitulo varchar(500),
+    texto_capitulo text,
+    ativo int default 0
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
+#Tabela de Usuarios#
 CREATE TABLE tb_usuarios(
     id_usuario int primary key auto_increment,
     nome_usuario varchar(255),
@@ -433,6 +445,6 @@ INSERT INTO `tb_players` (`id_player`, `nome_player`, `personagem_player`, `raca
 (1, 2, 'Alexander Payne', 1, 2, 0, 1, 0, 0, 'Vida', 30, 'ForÃ§a', 15, 'Velocidade', 20, 'Conhecimento', 35, 'Criatividade', 16, 'RaciocÃ­nio', 24, 'InteligÃªncia', 20, 'Produzir', 10, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 5, 6, 1, 1, 1, 1, 1, 1, 1),
 (2, 6, 'Androide 18', 2, 7, 0, 1, 0, 0, 'Vida', 40, 'ForÃ§a', 20, 'Velocidade', 20, 'Reflexo', 20, 'Conhecimento', 15, 'InteligÃªncia', 15, 'RaciocÃ­nio', 20, 'Agilidade', 20, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 35, 38, 1, 1, 1, 1, 1, 1, 1),
 (3, 4, 'Vulpis', 1, 6, 0, 1, 0, 0, 'Vida', 37, 'ForÃ§a', 15, 'Velocidade', 18, 'InteligÃªncia', 30, 'Programaï¿½ï¿½o', 25, 'RaciocÃ­nio', 25, 'LÃ¡bia', 10, 'Agilidade', 10, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 29, 31, 1, 1, 1, 1, 1, 1, 1),
-(4, 3, 'Shelbi-1.0', 2, 4, 0, 1, 0, 0, 'Vida', 42, 'ForÃ§a', 15, 'Velocidade', 20, 'Furtividade', 23, 'Destreza', 10, 'Furto', 25, 'Extorsï¿½o', 5, 'LÃ¡bia', 30, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 17, 18, 1, 1, 1, 1, 1, 1, 1),
+(4, 3, 'Shelbi-1.0', 2, 4, 0, 1, 0, 0, 'Vida', 42, 'ForÃ§a', 15, 'Velocidade', 20, 'Furtividade', 23, 'Destreza', 10, 'Furto', 25, 'ExtorsÃ£o', 5, 'LÃ¡bia', 30, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 17, 18, 1, 1, 1, 1, 1, 1, 1),
 (5, 7, 'Minimus', 1, 5, 0, 1, 0, 0, 'Vida', 45, 'ForÃ§a', 12, 'Velocidade', 22, 'Furtividade', 21, 'Destreza', 25, 'InteligÃªncia', 15, 'Carisma', 10, 'PersuasÃ£o', 20, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 23, 25, 1, 1, 1, 1, 1, 1, 1),
 (6, 5, 'Dante', 1, 9, 0, 1, 0, 0, 'Vida', 45, 'ForÃ§a', 15, 'Velocidade', 20, 'Precisï¿½o', 20, 'Furtividade', 13, 'Destreza', 15, 'Conhecimento', 17, 'InteligÃªncia', 25, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 48, 49, 1, 1, 1, 1, 1, 1, 1);
