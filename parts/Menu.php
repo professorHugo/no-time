@@ -14,7 +14,7 @@
                 <li <?php if(isset($_GET['url']) and $_GET['url'] == 'Home'){ echo 'class="active"';}?>><a href="?url=Home">Inicio</a></li>
                 <li <?php if(isset($_GET['url']) and $_GET['url'] == 'Historia'){ echo 'class="active"';}?>><a href="?url=Historia">História</a></li>
                 <?php
-                if(isset($_SESSION['Login'])){
+                if(isset($_SESSION['Login']) AND $_SESSION['Login']['nivel_usuario'] == 1){
 //                    <!-- Escudo do Mestre -->
 //                    incluir tomada de decisão para
                     ?>

@@ -20,7 +20,8 @@ if($_SESSION['Login']['nivel_usuario'] == 1){
     INNER JOIN tb_levels xp
         ON p.lv_player = xp.id_level
     ";
-    
+    $ExeQrBuscarPlayers = mysqli_query($connection, $QueryBuscarPlayers);
+    $LinQrBuscarPlayers = mysqli_num_rows($ExeQrBuscarPlayers);
 }else{
     $QueryBuscarPlayers = "
     SELECT 
@@ -41,51 +42,38 @@ if($_SESSION['Login']['nivel_usuario'] == 1){
         ON p.lv_player = xp.id_level
     WHERE nome_player = '$Player' 
     ";
+    $ExeQrBuscarPlayers = mysqli_query($connection, $QueryBuscarPlayers);
+    $LinQrBuscarPlayers = mysqli_num_rows($ExeQrBuscarPlayers);
 }
 
 
-if($ExeQrBuscarPlayers = mysqli_query($connection, $QueryBuscarPlayers)){
-    if($LinQrBuscarPlayers = mysqli_num_rows($ExeQrBuscarPlayers) > 0){
+if($ExeQrBuscarPlayers){
+    if($LinQrBuscarPlayers > 0){
     ?>
-    <h2>Players Cadastrados: <?php echo $LinQrBuscarPlayers?></h2>
-    <table class="table table-condensed table-hover table-responsive">
-        <tr>
-            <td>Id do Player</td>
-            <td>Jogador</td>
-            <td>Personagem</td>
-            <td>Classe</td>
-            <td>Level</td>
-            <td>XP</td>
-            <td>Próximo Lv</td>
-            <td>Ver</td>
-        </tr>
-        <?php
-        while($Players = mysqli_fetch_assoc($ExeQrBuscarPlayers)){
-            ?>
-        <tr>
-            <td><?php echo $Players['id_player']?></td>
-            <td>
-            <?php
-                
-                echo $Players['nome_player']
-            ?>
-            </td>
-            <td><?php echo $Players['personagem_player']?></td>
-            <td><?php echo $Players['nome_classe']?></td>
-            <td><?php echo $Players['lv_player']?></td>
-            <td><?php echo $Players['xp_player']?></td>
-            <td><?php echo $Players['lv_pontos_xp']?></td>
-            <td>
-                <a href="?url=MostrarPlayer&Player=<?php echo $Players['id_player']?>">
-                    <i class="glyphicon glyphicon-eye-open"></i>
-                </a>
-            </td>
-        </tr>
-        <?php
-        }
-        ?>
-    </table>
-    <?php
+<h2 style="margin-left:1.5%">Players Cadastrados: <?php echo $LinQrBuscarPlayers?></h2>
+<hr style="margin-left:1.5%">
+<div style="margin-left:15px">
+<?php
+    while($Players = mysqli_fetch_assoc($ExeQrBuscarPlayers)){
+?>
+<div class="col-xs-12 col-md-3" style="margin-bottom: 25px;border-radius:10px">
+    Identificação: <?php echo $Players['id_player']?> <br>
+    Jogador: <?php echo lmWord($Players['nome_player'],18)?><br>
+    Personagem: <?php echo lmWord($Players['personagem_player'],18)?> <br>
+    Classe: <?php echo $Players['nome_classe'] ?> <br>
+    Level: 1 <br>
+    <a href="?url=MostrarPlayer&Player=<?php echo $Players['id_player']?>">
+       <button class="btn btn-default btn-xs" style="width:100%;">
+           <i class="glyphicon glyphicon-eye-open"></i>
+       </button>
+    </a>
+</div>
+
+<?php
+}
+?>
+</div>
+<?php
     }
 }else{
     echo "Você ainda não tem personagens";
