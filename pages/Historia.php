@@ -1,78 +1,70 @@
 <?php
 //Inserir o capítulo da história
-if(isset($_POST['SalvarCapitulo'])){
-    $TituloCapitulo         = mysqli_real_escape_string($connection, $_POST['TituloCapitulo']);
-    $TextoCapitulo          = mysqli_real_escape_string($connection, $_POST['TextoCapitulo']);
-    $QueryInserirCapitulo   = "
-        INSERT INTO tb_capitulos_historia(titulo_capitulo,texto_capitulo)
-        VALUES('$TituloCapitulo','$TextoCapitulo')
-    ";
-    
-    if(mysqli_query($connection, $QueryInserirCapitulo)){
-        ?>
-        <script>alert("Capitulo <?php echo $TituloCapitulo ?> inserido")</script>
-        <meta http-equiv="refresh" content="0;?url=Historia">
-        <?php
-    }else{
-        ?>
-        <script>alert("erro ao inserir capitulo <?php echo $TituloCapitulo.mysqli_error($connection) ?>")</script>
-        <?php
-    }
-}
+include 'parts/adm/SalvarCapitulo.php';
+include 'parts/adm/EditarCapitulo.php';
 
 //Ler os capítulos da história
-$QueryBuscarHistorias = "SELECT * FROM tb_capitulos_historia WHERE ativo = 1";
-$ExeQrBuscarHistorias = mysqli_query($connection, $QueryBuscarHistorias);
+include 'parts/adm/LerCapitulos.php';
+
 ?>
 
 
-<!--Inserir plano de fundo na classe background-historia-->
 <div class="background-historia">
-    <div class="com-xs-10 col-md-10">
-        <h2>Tema base: Futurístico - Cyberpunk</h2>
-    </div>
-    <div class="col-xs-2 col-md-2">
-        <h2>
+    <div class="com-xs-9 col-md-9">
+        <h3 class="pull-left">Tema base: Cyberpunk</h3>
+<?php
+if(isset($_SESSION['Login'])){
+    if($_SESSION['Login']['nivel_usuario'] == 1){
+        ?>
+        <h3 class="pull-left" style="margin-left: 8%">
             <i class="glyphicon glyphicon-plus" title="Adicionar Capítulo" data-toggle="modal" data-target="#InserirCapitulo"></i>
-        </h2>
+        </h3>
+        <?php
+    }
+}
+?>
+        
     </div>
     <div class="clearfix"></div>
     <hr>
-    <div class="col-xs-12 col md-8">
-        <?php
-        foreach($ExeQrBuscarHistorias as $Capitulos):
+    <?php
+    foreach($ExeQrBuscarHistorias as $Capitulos):
+    ?>
+    <div class="col-xs-12 col-md-6">
+
+        <h3>
+            <?php
+            if($Capitulos['id_capitulo'] < 2){
+                echo "Introdução: ".$Capitulos['titulo_capitulo'];
+            }
+            if($Capitulos['id_capitulo'] >= 2){
+                echo "Capítulo ";
+                echo $Capitulos['id_capitulo'] - 1 ." - ".$Capitulos['titulo_capitulo'];
+            }
         ?>
-        <h3>Capítulo <?php echo $Capitulos['id_capitulo']." - ".$Capitulos['titulo_capitulo']?></h3>
+        </h3>
         <div style="text-indent: 50px" class="text-justify">
-            <?php echo $Capitulos['texto_capitulo']?>
-        </div>
+            <?php echo lmWord($Capitulos['texto_capitulo'],280)?>...<br><br>
+            <button class="btn btn-default btn-sm" style="color:#111" data-toggle="modal" data-target="#LerHistoria<?php echo $Capitulos['id_capitulo']?>">Ler tudo</button>
         <?php
-        endforeach;
+        if(isset($_SESSION['Login'])){
+            if($_SESSION['Login']['nivel_usuario'] == 1){
         ?>
-    </div>
-</div>
+            <button class="btn btn-danger btn-sm pull-right" style="margin-right:5%" data-toggle="modal" data-target="#EditarHistoria<?php echo $Capitulos['id_capitulo']?>">Editar História</button>
 
-
-<!-- Modal Inserir Capítulo -->
-<div class="modal fade" id="InserirCapitulo" tabindex="-1" role="dialog" aria-labelledby="InserirCapitulo">
-    <form action="#" method="post">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Inserir Capítulo</h4>
-                </div>
-                <div class="modal-body">
-                    <label for="TituloCapitulo">Título: </label>
-                    <input type="text" name="TituloCapitulo" id="TituloCapitulo" class="form-control">
-                    <label for="TextoCapitulo">Texto</label>
-                    <textarea class="form-control" name="TextoCapitulo" cols="30" rows="10" id="TextoCapitulo"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                    <button type="submit" class="btn btn-primary" name="SalvarCapitulo">Salvar Capítulo</button>
-                </div>
-            </div>
+            <?php
+            }
+        }
+        ?>
         </div>
-    </form>
+        <hr>
+
+    </div>
+
+    
+    <?php
+    include 'parts/adm/ModalsCapitulos.php';
+    endforeach;
+    ?>
 </div>
+<?php include 'parts/adm/ModalInserirCapitulos.php'?>

@@ -23,9 +23,9 @@ and open the template in the editor.
         <?php include 'parts/Menu.php';?>
     </div>
     
-    <h2 id="Background" class="section col-md-10 col-md-push-1">Status do Jogo: Criação</h2>
+    <h2 id="Background" class="section col-xs-10 col-xs-push-1">Status do Jogo: Criação</h2>
 
-    <div id="Background" class="section col-md-10 col-md-push-1">
+    <div class="section col-xs-10 col-xs-push-1 Background1">
 
         <?php
             //Cadastrar Usuário

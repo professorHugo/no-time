@@ -1,6 +1,8 @@
 01/03/2020 - 11h15m
 Recursos disponíveis:
 
+    -Ajustes gerais de interface Mobile First;
+    
     -Cadastro de usuários a partir de um e-mail com senha:
         Login automático no cadastro;
         Usuário inicial tem nível de permissão 0.     
@@ -26,7 +28,6 @@ Recursos disponíveis:
 Próximas Jornadas:
 
     - Finalizar as edições de recursos do sistema;
-    - Adicionar Capitulos ao jogo;
     - Adicionar Classes;
     - Adicionar Raças:
         - Ajustar Banco de dados para inserir descrições das raças;
