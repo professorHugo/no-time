@@ -1,5 +1,5 @@
 <div class="col-xs-12 text-center" style="margin-top:10px">
-    <button class="btn btn-md" style="color:#111" data-toggle="modal" data-target="#VerHistoria">Ver História</button>
+    <button class="btn btn-default btn-md" data-toggle="modal" data-target="#VerHistoria">Ver História</button>
 </div>
 
 <?php

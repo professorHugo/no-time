@@ -44,7 +44,7 @@ if( $ResQrBuscarPlayers > 0 ){
     while($ResPlayers = mysqli_fetch_assoc($ExeQrBuscarPlayers)){
         ?>
 
-<div class="col-xs-6 block-dados-personagem">
+<div class="col-xs-12 col-md-6 block-dados-personagem">
     <div class="col-xs-6">
         <h4 class="text-center">Dados do Jogador</h4>
         <hr>
@@ -61,7 +61,7 @@ if( $ResQrBuscarPlayers > 0 ){
     </div>
 
 </div>
-<div class="col-xs-6 block-dados-personagem">
+<div class="col-xs-12 col-md-6 block-dados-personagem">
     <h4 class="text-center">Atributos e Habilidades</h4>
     <hr>
     <div class="col-xs-6">

@@ -34,6 +34,7 @@ Próximas Jornadas:
     - Adicionar Equipamentos
         - Defesas;
     - Adicionar Skills;
+    - Editar História;
     
 
     

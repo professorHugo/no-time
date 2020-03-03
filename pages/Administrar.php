@@ -22,31 +22,31 @@
 ?>
 <div class="row" style="margin-bottom: 20px">
     <div class="col-md-1"></div>
-    <div class="col-md-2 chamada-item">
+    <div class="col-xs-4 col-md-2 chamada-item">
         <a href="?url=Administrar&T=Classes">
             <h3 <?php if(isset($ItemADM) && $ItemADM == "Classes"){ echo 'class="Adm-Ativo"';}?>>Classes</h3>
             <img src="img/Layout/holograma.png" class="img-responsive" alt="">
         </a>
     </div>
-    <div class="col-md-2 chamada-item">
+    <div class="col-xs-4 col-md-2 chamada-item">
         <a href="?url=Administrar&T=Racas">
             <h3 <?php if(isset($ItemADM) && $ItemADM == "Racas"){ echo 'class="Adm-Ativo"';}?>>Raças</h3>
             <img src="img/Layout/holograma.png" class="img-responsive" alt="">
         </a>
     </div>
-    <div class="col-md-2 chamada-item">
+    <div class="col-xs-4 col-md-2 chamada-item">
         <a href="?url=Administrar&T=Armas">
             <h3 <?php if(isset($ItemADM) && $ItemADM == "Armas"){ echo 'class="Adm-Ativo"';}?>>Armas</h3>
             <img src="img/Layout/holograma.png" class="img-responsive" alt="">
         </a>
     </div>
-    <div class="col-md-2 chamada-item">
+    <div class="col-xs-4 col-md-2 chamada-item">
         <a href="?url=Administrar&T=Defesas">
             <h3 <?php if(isset($ItemADM) && $ItemADM == "Defesas"){ echo 'class="Adm-Ativo"';}?>>Defesas</h3>
             <img src="img/Layout/holograma.png" class="img-responsive" alt="">
         </a>
     </div>
-    <div class="col-md-2 chamada-item">
+    <div class="col-xs-4 col-md-2 chamada-item">
         <a href="?url=Administrar&T=Skills">
             <h3 <?php if(isset($ItemADM) && $ItemADM == "Skills"){ echo 'class="Adm-Ativo"';}?>>Skills</h3>
             <img src="img/Layout/holograma.png" class="img-responsive" alt="">

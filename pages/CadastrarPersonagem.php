@@ -13,6 +13,7 @@ include 'parts/components/VariaveisCadastroPersonagem.php';
         echo "Cadastrado";
         ?>
         <meta http-equiv="refresh" content="0;?url=Todos-Os-Personagens">
+<!--        Criar modal de personagem-->
         <?php
     }else{
         echo "Não cadastrado" . mysql_error();
