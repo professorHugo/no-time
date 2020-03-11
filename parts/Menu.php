@@ -14,7 +14,7 @@
                 <li <?php if(isset($_GET['url']) and $_GET['url'] == 'Home'){ echo 'class="active"';}?>><a href="?url=Home">Inicio</a></li>
                 <li <?php if(isset($_GET['url']) and $_GET['url'] == 'Historia'){ echo 'class="active"';}?>><a href="?url=Historia">História</a></li>
                 <?php
-                if(isset($_SESSION['Login']) AND $_SESSION['Login']['nivel_usuario'] == 1){
+                if(isset($_SESSION['Login']) AND $_SESSION['Login']['nivel_usuario'] >= 1){
 //                    <!-- Escudo do Mestre -->
 //                    incluir tomada de decisão para
                     ?>
@@ -35,6 +35,11 @@
                         <li>
                             <a href="?url=Classes">
                                 Classes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="?url=Inimigos">
+                                Inimigos
                             </a>
                         </li>
                     </ul>
@@ -59,7 +64,7 @@
                         <li class="dropdown-header">Outros</li>
                         <?php
                         //Se for administrador do sistema
-                        if($_SESSION['Login']['nivel_usuario'] == 1){
+                        if($_SESSION['Login']['nivel_usuario'] >= 1){
                             ?>
                             <li>
                                 <a href="?url=Administrar">

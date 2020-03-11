@@ -1,6 +1,6 @@
 <?php
 if(isset($_SESSION['Login'])){
-    if($_SESSION['Login']['nivel_usuario'] ==1){
+    if($_SESSION['Login']['nivel_usuario'] >1){
     $QueryBuscarHistorias = "SELECT * FROM tb_capitulos_historia";
     $ExeQrBuscarHistorias = mysqli_query($connection, $QueryBuscarHistorias);
 }

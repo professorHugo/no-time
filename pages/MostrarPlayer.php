@@ -44,7 +44,7 @@ if( $ResQrBuscarPlayers > 0 ){
     while($ResPlayers = mysqli_fetch_assoc($ExeQrBuscarPlayers)){
         ?>
 
-<div class="col-xs-12 col-md-6 block-dados-personagem">
+<div class="col-xs-12 col-md-6">
     <div class="col-xs-6">
         <h4 class="text-center">Dados do Jogador</h4>
         <hr>
@@ -58,10 +58,11 @@ if( $ResQrBuscarPlayers > 0 ){
     </div>
     <div class="col-xs-6">
         <?php include 'parts/add/armas.php';include 'parts/add/defesa.php';include 'parts/add/historia.php';?>
+        
     </div>
 
 </div>
-<div class="col-xs-12 col-md-6 block-dados-personagem">
+<div class="col-xs-12 col-md-6">
     <h4 class="text-center">Atributos e Habilidades</h4>
     <hr>
     <div class="col-xs-6">
@@ -77,10 +78,25 @@ if( $ResQrBuscarPlayers > 0 ){
         <p><?php echo $ResPlayers['hab4_titulo'] . ": " . $ResPlayers['hab4_v'];?></p>
         <p>Hab <?php echo $ResPlayers['hab5_titulo'] . ": " . $ResPlayers['hab5_v'];?></p>
     </div>
+    <?php
+      if($_SESSION['Login']){
+          if($_SESSION['Login']['nivel_usuario']>=1){
+              ?>
+              <div class="col-xs-12" style="max-height:50px; background:#DDD">
+                <a href="?url=MostrarPlayer&Player=<?php echo $Player-1?>">Aterior</a>
+                Player Atual: <?php echo $Player?>
+                <a href="?url=MostrarPlayer&Player=<?php echo $Player+1?>">Próximo</a>
+            </div>
+              <?php
+          }
+      }
+    ?>
+    
+    
 </div>
 <div class="clearfix"></div>
 <hr>
-<div class="col-xs-12 block-dados-personagem" style="min-height: 20px;padding-top:20px">
+<div class="col-xs-12 " style="min-height: 20px;padding-top:20px">
     <?php        
         include 'parts/add/habilidades.php';
         ?>

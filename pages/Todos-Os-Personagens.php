@@ -1,7 +1,7 @@
 <?php
 $Player = $_SESSION['Login']['id_usuario'];
 //Validação para administradores
-if($_SESSION['Login']['nivel_usuario'] == 1){
+if($_SESSION['Login']['nivel_usuario'] >= 1){
     $QueryBuscarPlayers = "
     SELECT 
         p.*,

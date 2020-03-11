@@ -24,6 +24,7 @@ Recursos disponíveis:
                 - Filtro por classe;
             - História e Capítulos:
                 -Adicionar e visualizar História;
+                -Editar capítulos;
 
 Próximas Jornadas:
 

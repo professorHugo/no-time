@@ -14,7 +14,7 @@ include 'parts/adm/LerCapitulos.php';
         <h3 class="pull-left">Tema base: Cyberpunk</h3>
 <?php
 if(isset($_SESSION['Login'])){
-    if($_SESSION['Login']['nivel_usuario'] == 1){
+    if($_SESSION['Login']['nivel_usuario'] >= 1){
         ?>
         <h3 class="pull-left" style="margin-left: 8%">
             <i class="glyphicon glyphicon-plus" title="Adicionar Capítulo" data-toggle="modal" data-target="#InserirCapitulo"></i>
@@ -48,7 +48,7 @@ if(isset($_SESSION['Login'])){
             <button class="btn btn-default btn-sm" style="color:#111" data-toggle="modal" data-target="#LerHistoria<?php echo $Capitulos['id_capitulo']?>">Ler tudo</button>
         <?php
         if(isset($_SESSION['Login'])){
-            if($_SESSION['Login']['nivel_usuario'] == 1){
+            if($_SESSION['Login']['nivel_usuario'] >= 1){
         ?>
             <button class="btn btn-danger btn-sm pull-right" style="margin-right:5%" data-toggle="modal" data-target="#EditarHistoria<?php echo $Capitulos['id_capitulo']?>">Editar História</button>
 
