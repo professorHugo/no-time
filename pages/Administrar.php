@@ -20,40 +20,46 @@
         include 'pages/Adm/Editar-Skill.php';
     }
 ?>
-<div class="row" style="margin-bottom: 20px">
+
+
+<div class="row" style="margin-bottom: 50px">
     <div class="col-md-1"></div>
+    
+    
     <div class="col-xs-4 col-md-2 chamada-item">
         <a href="?url=Administrar&T=Classes">
-            <h3 <?php if(isset($ItemADM) && $ItemADM == "Classes"){ echo 'class="Adm-Ativo"';}?>>Classes</h3>
+            <p <?php if(isset($ItemADM) && $ItemADM == "Classes"){ echo 'class="Adm-Ativo"';}?>>Classes</p>
             <img src="img/Layout/holograma.png" class="img-responsive" alt="">
         </a>
     </div>
     <div class="col-xs-4 col-md-2 chamada-item">
         <a href="?url=Administrar&T=Racas">
-            <h3 <?php if(isset($ItemADM) && $ItemADM == "Racas"){ echo 'class="Adm-Ativo"';}?>>Raças</h3>
+            <p <?php if(isset($ItemADM) && $ItemADM == "Racas"){ echo 'class="Adm-Ativo"';}?>>Raças</p>
             <img src="img/Layout/holograma.png" class="img-responsive" alt="">
         </a>
     </div>
     <div class="col-xs-4 col-md-2 chamada-item">
         <a href="?url=Administrar&T=Armas">
-            <h3 <?php if(isset($ItemADM) && $ItemADM == "Armas"){ echo 'class="Adm-Ativo"';}?>>Armas</h3>
+            <p <?php if(isset($ItemADM) && $ItemADM == "Armas"){ echo 'class="Adm-Ativo"';}?>>Armas</p>
             <img src="img/Layout/holograma.png" class="img-responsive" alt="">
         </a>
     </div>
     <div class="col-xs-4 col-md-2 chamada-item">
         <a href="?url=Administrar&T=Defesas">
-            <h3 <?php if(isset($ItemADM) && $ItemADM == "Defesas"){ echo 'class="Adm-Ativo"';}?>>Defesas</h3>
+            <p <?php if(isset($ItemADM) && $ItemADM == "Defesas"){ echo 'class="Adm-Ativo"';}?>>Defesas</p>
             <img src="img/Layout/holograma.png" class="img-responsive" alt="">
         </a>
     </div>
     <div class="col-xs-4 col-md-2 chamada-item">
         <a href="?url=Administrar&T=Skills">
-            <h3 <?php if(isset($ItemADM) && $ItemADM == "Skills"){ echo 'class="Adm-Ativo"';}?>>Skills</h3>
+            <p <?php if(isset($ItemADM) && $ItemADM == "Skills"){ echo 'class="Adm-Ativo"';}?>>Skills</p>
             <img src="img/Layout/holograma.png" class="img-responsive" alt="">
         </a>
     </div>
     <div class="col-md-1"></div>
 </div>
+
+
 <div class="clearfix"></div>
 <?php
     if(isset($_GET['T'])){

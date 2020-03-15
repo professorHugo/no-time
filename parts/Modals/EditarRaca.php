@@ -13,14 +13,15 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="RacaEditar" value="<?php echo $ResRaca['id_raca']?>">
-                    <p class="lead">
+                   
+                    <div class="col-xs-12">
                         <label for="NomeRaca">Nome da Raça</label>
-                    </p>
-                    <div class="col-md-12">
-                        <label>
-                            <input type="text" class="form-control" name="NomeRaca" id="NomeRaca" value="<?php echo $ResRaca['nome_raca']?>">
-                        </label>
-                    </div>                    
+                        <input type="text" class="form-control" name="NomeRaca" id="NomeRaca" value="<?php echo $ResRaca['nome_raca']?>">
+                    </div>
+                    <div class="col-xs-12">
+                        <label for="DescrRaca">Descrição</label>
+                        <textarea class="form-control" name="DescrRaca" id="DescrRaca" cols="30" rows="10"><?php echo $ResRaca['descr_raca']?></textarea>
+                    </div>                  
                     <div class="clearfix"></div>
                 </div>
                 <div class="clearfix"></div>

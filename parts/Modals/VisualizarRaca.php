@@ -12,12 +12,9 @@
                 </h4>
             </div>
             <div class="modal-body">
-                <div class="col-md-6">
-                    <p class="lead">Atributos</p>
+                <div class="col-xs-12">
                     
-                </div>
-                <div class="col-md-6">
-                    <p class="lead">Habilidades</p>
+                <?php echo $ResRaca['descr_raca']?>
                     
                 </div>
                 <div class="clearfix"></div>

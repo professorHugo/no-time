@@ -2,17 +2,18 @@
 Recursos disponíveis:
 
     -Ajustes gerais de interface Mobile First;
-    
-    -Cadastro de usuários a partir de um e-mail com senha:
+    -Cadastro de usuários a partir de um usuário com senha:
         Login automático no cadastro;
         Usuário inicial tem nível de permissão 0.     
             - Pode adicionar seus personagens;
             - Pode visualizar seus personagens;
             - Visualização da História e seus capítulos;
-        Nível 1 de permissão:
+            - Incluir e editar a história de cada personagem que criar;
+    
+        
+        Nível 2 de permissão:
             - Editar as classes:
                 - Recursos visuais como nome e descrição de atributos;
-            - Editar Raças: Apenas o nome;
             - Armas:
                 -Permitido classes;
                 -Permitido Adicionar;
@@ -25,17 +26,20 @@ Recursos disponíveis:
             - História e Capítulos:
                 -Adicionar e visualizar História;
                 -Editar capítulos;
+                -Ativar/Desativar;
+            - Raças:
+                -Descrição e história das raças;
 
 Próximas Jornadas:
 
     - Finalizar as edições de recursos do sistema;
-    - Adicionar Classes;
-    - Adicionar Raças:
-        - Ajustar Banco de dados para inserir descrições das raças;
     - Adicionar Equipamentos
         - Defesas;
     - Adicionar Skills;
-    - Editar História;
+    - Adicionar detalhes das classes
+        - Quais os perfis de cada classe;
+    - Adicionar Inimigos
+        -Dados em Excel;
     
 
     

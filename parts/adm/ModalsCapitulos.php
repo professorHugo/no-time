@@ -19,41 +19,37 @@
                     </div>
                     <div class="modal-footer">
                         <div class="col-xs-6">
-                            <?php
-                            $QueryBuscarCapitulosAtivar = "SELECT * FROM tb_capitulos_historia";
-                            $ExeQrBuscarCapitulosAtivar = mysqli_query($connection, $QueryBuscarCapitulosAtivar);
-                            foreach($ExeQrBuscarCapitulosAtivar as $Ativar1):
-                            if($Ativar1['ativo'] == 1){
-                                echo ' <label for="Ativar">Ativo</label>';
-                            }else{
-                                echo ' <label for="Ativar">Desativado</label>';
-                            }
-                            ?>
-                            <?php
-                            endforeach;
-                            ?>
-                            <select name="Ativar" id="Ativar" class="form-control">
-                            <?php
-                            $QueryBuscarCapitulosAtivar2 = "SELECT * FROM tb_capitulos_historia";
-                            $ExeQrBuscarCapitulosAtivar2 = mysqli_query($connection, $QueryBuscarCapitulosAtivar2);
-                            
-                            echo '';
-                            
-                            foreach($ExeQrBuscarCapitulosAtivar2 as $Ativar2):
-                                if($Ativar2['ativo'] == 1){
-                                    echo '
-                                    <option value="1">Ativar</option>
-                                    <option value="0">Desativar</option>
-                                    ';
-                                }else{
-                                    echo '
-                                    <option value="0">Desativar</option>
-                                    <option value="1">Ativar</option>
-                                    ';
-                                }
-                            endforeach;
-                            ?>
-                            </select>
+                        <?php
+                        $QueryBuscarCapituloAtivo1 = "SELECT * FROM tb_capitulos_historia WHERE id_capitulo = $Capitulos[id_capitulo]";
+                        $ExeQrBuscarCapituloAtivo1 = mysqli_query($connection, $QueryBuscarCapituloAtivo1);
+                        foreach($ExeQrBuscarCapituloAtivo1 as $Ativo1):
+                        if($Ativo1['ativo'] == 1){
+                            echo'<label for="Ativar">Ativo</label>';
+                        }else{
+                            echo'<label for="Ativar">Inativo</label>';
+
+                        }
+                        endforeach;
+                        ?>
+                        <select name="Ativar" id="Ativar">
+                        <?php
+                        $QueryBuscarCapituloAtivo2 = "SELECT * FROM tb_capitulos_historia WHERE id_capitulo = $Capitulos[id_capitulo]";
+                        $ExeQrBuscarCapituloAtivo2 = mysqli_query($connection, $QueryBuscarCapituloAtivo2);
+                        foreach($ExeQrBuscarCapituloAtivo2 as $Ativo2):
+                        if($Ativo2['ativo'] == 1){
+                            echo'
+                            <option value="1">Ativado</option>
+			                <option value="0">Desativar</option>
+                            ';
+                        }else{
+                            echo'
+			                <option value="0">Desativado</option>
+                            <option value="1">Ativar</option>
+                            ';
+                        }
+                        endforeach;
+                        ?>
+                        </select>
                         </div>
                         <div class="col-xs-6">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>

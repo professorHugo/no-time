@@ -37,7 +37,7 @@ if(isset($_SESSION['Login'])){
             if($Capitulos['id_capitulo'] < 2){
                 echo "Introdução: ".$Capitulos['titulo_capitulo'];
             }
-            if($Capitulos['id_capitulo'] >= 2){
+            if($Capitulos['id_capitulo'] > 1){
                 echo "Capítulo ";
                 echo $Capitulos['id_capitulo'] - 1 ." - ".$Capitulos['titulo_capitulo'];
             }
