@@ -1,7 +1,7 @@
 <!--Modal para visualizar a classe-->
 <div class="modal fade in" id="VisualizarClasse<?php echo $ResClasse['id_classe']?>" tabindex="-1" role="dialog" aria-labelledby="Cadastro-Player" style="">
 
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-labelledb="Close">
@@ -12,7 +12,7 @@
                 </h4>
             </div>
             <div class="modal-body">
-                <div class="col-md-6">
+                <div class="col-xs-6">
                     <p class="lead">Atributos</p>
                     <p>
                         <label for="Atr1">Atributo1</label>: <?php echo $ResClasse['atr1']?>
@@ -26,8 +26,7 @@
                     <p>
                         <label for="Atr4">Atributo4</label>: <?php echo $ResClasse['atr4']?>
                     </p>
-                </div>
-                <div class="col-md-6">
+                    <hr>
                     <p class="lead">Habilidades</p>
                     <p>
                         <label for="Hab1">Habilidade1</label>: <?php echo $ResClasse['hab_c1']?>
@@ -41,6 +40,12 @@
                     </p>
                     <p>
                         <label for="Hab4">Habilidade4</label>: <?php echo $ResClasse['hab_c4']?>
+                    </p>
+                </div>
+                <div class="col-xs-6 text-justify">
+                    <p class="lead">Descrição</p>
+                    <p>
+                        <?php echo $ResClasse['descr_classe'];?>
                     </p>
                 </div>
                 <div class="clearfix"></div>

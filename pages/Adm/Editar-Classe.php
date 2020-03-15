@@ -13,6 +13,7 @@
         $Hab3       = $_POST['Hab3'];
         $Hab4       = $_POST['Hab4'];
         $Hab5       = 'Especial';
+        $Descricao  = $_POST['Descricao'];
 
 
         $QueryEditarClasse = "
@@ -28,7 +29,8 @@
                 hab_c2 = '$Hab2',
                 hab_c3 = '$Hab3',
                 hab_c4 = '$Hab4',
-                hab_c5 = '$Hab5'
+                hab_c5 = '$Hab5',
+                descr_classe = '$Descricao'
             WHERE id_classe = $IdClasse
         ";
 

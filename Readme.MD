@@ -1,4 +1,4 @@
-01/03/2020 - 11h15m
+15/03/2020 - 11h15m
 Recursos disponíveis:
 
     -Ajustes gerais de interface Mobile First;
@@ -13,10 +13,9 @@ Recursos disponíveis:
         
         Nível 2 de permissão:
             - Editar as classes:
-                - Recursos visuais como nome e descrição de atributos;
+                - Descrição, Atributos e Habilidades da classe;
             - Armas:
-                -Permitido classes;
-                -Permitido Adicionar;
+                -Adicionar, Editar, Classe;
             - Editar Defesas;
                 - Ajustar para caber classe que pode usar a arma;
             - Adicionar História do personagem após a criação;
@@ -36,8 +35,6 @@ Próximas Jornadas:
     - Adicionar Equipamentos
         - Defesas;
     - Adicionar Skills;
-    - Adicionar detalhes das classes
-        - Quais os perfis de cada classe;
     - Adicionar Inimigos
         -Dados em Excel;
     

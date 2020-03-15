@@ -139,126 +139,20 @@ create table tb_classes (
     hab_c2 varchar(255),
     hab_c3 varchar(255),
     hab_c4 varchar(255),
-    hab_c5 varchar(255)
+    hab_c5 varchar(255),
+    descr_classe text
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
-INSERT INTO tb_classes(nome_classe, atr1, atr2, atr3, atr4, hab_c1, hab_c2, hab_c3, hab_c4, hab_c5)
-VALUES
-(
-    'Todas',
-    'Vida',
-    'ForÃ§a',
-    'Velocidade',
-    '-',
-    '-',
-    '-',
-    '-',
-    '-',
-    '-'
-),
-(
-    'Cientista',
-    'Vida',
-    'ForÃ§a',
-    'Velocidade',
-    'Conhecimento',
-    'Criatividade',
-    'RaciocÃ­nio',
-    'InteligÃªncia',
-    'Produzir',
-    'Especial'
-),
-
-(
-    'EmpresÃ¡rio',
-    'Vida',
-    'ForÃ§a',
-    'Velocidade',
-    'PersuasÃ£o',
-    'NegociaÃ§Ã£o',
-    'Conhecimento',
-    'InteligÃªncia',
-    'AntecipaÃ§Ã£o',
-    'Especial'
-),
-
-(
-    'LadrÃ£o',
-    'Vida',
-    'ForÃ§a',
-    'Velocidade',
-    'Furtividade',
-    'Destreza',
-    'Furto',
-    'ExtorsÃ£o',
-    'LÃ¡bia',
-    'Especial'
-),
-
-(
-    'Assassino',
-    'Vida',
-    'ForÃ§a',
-    'Velocidade',
-    'Furtividade',
-    'Destreza',
-    'InteligÃªncia',
-    'Carisma',
-    'PersuasÃ£o',
-    'Especial'
-),
-
-(
-    'Hacker',
-    'Vida',
-    'ForÃ§a',
-    'Velocidade',
-    'InteligÃªncia',
-    'Programação',
-    'RaciocÃ­nio',
-    'LÃ¡bia',
-    'Agilidade',
-    'Especial'
-),
-
-(
-    'Piloto',
-    'Vida',
-    'ForÃ§a',
-    'Velocidade',
-    'Reflexo',
-    'Conhecimento',
-    'InteligÃªncia',
-    'RaciocÃ­nio',
-    'Agilidade',
-    'Especial'
-),
-
-(
-    'Contrabandista',
-    'Vida',
-    'ForÃ§a',
-    'Velocidade',
-    'Carisma',
-    'Carisma',
-    'NegociaÃ§Ã£o',
-    'InteligÃªncia',
-    'AntecipaÃ§Ã£o',
-    'Especial'
-),
-
-(
-    'Atirador',
-    'Vida',
-    'ForÃ§a',
-    'Velocidade',
-    'Precisão',
-    'Furtividade',
-    'Destreza',
-    'Conhecimento',
-    'InteligÃªncia',
-    'Especial'
-);
+INSERT INTO `tb_classes` (`id_classe`, `nome_classe`, `atr1`, `atr2`, `atr3`, `atr4`, `hab_c1`, `hab_c2`, `hab_c3`, `hab_c4`, `hab_c5`, `descr_classe`) VALUES
+(1, 'Todas', 'Vida', 'ForÃ§a', 'Velocidade', '-', '-', '-', '-', '-', 'Especial', ''),
+(2, 'Cientista', 'Vida', 'ForÃ§a', 'Velocidade', 'Conhecimento', 'Criatividade', 'RaciocÃ­nio', 'InteligÃªncia', 'Produzir', 'Especial', '<p>\r\nCientistas sÃ£o conhecidos por seu alto nÃ­vel de conhecimento, raciocÃ­nio e inteligÃªncia. Em alguns casos, sÃ£o criativos e tÃªm certa facilidade para criar soluÃ§Ãµes com os poucos recursos que tÃªm disponÃ­vel.\r\n</p>\r\n<p>A classe tem facilidade para tomada de decisÃ£o devido ao seu nÃ­vel acadÃªmico e raciocÃ­nio rÃ¡pido, mas sÃ£o fracos em combates fÃ­sicos.</p>\r\n<ul>Forte para:\r\n<li>Tomada de decisÃ£o;</li>\r\n<li>Controle mental, devido ao alto nÃ­vel de raciocÃ­nio;</li>\r\n</ul>\r\n<ul>Fraco para:\r\n<li>Combates fÃ­sicos;</li>\r\n<li>Riscos de danos severos ao ser atingido;</li>\r\n</ul>\r\n<ul>Armamento possÃ­vel:\r\n<li>Facas, adagas e espadas;</li>\r\n<li>Armas de curta distÃ¢ncia, como pistolas;</li>\r\n<li>Armas de mÃ©dia distÃ¢ncia, como espingardas. NÃ£o sÃ£o suas favoritas nem adequadas, sofrem penalidade caso usem esse tipo de armamento;</li>\r\n</ul>'),
+(3, 'EmpresÃ¡rio', 'Vida', 'ForÃ§a', 'Velocidade', 'PersuasÃ£o', 'NegociaÃ§Ã£o', 'Conhecimento', 'InteligÃªncia', 'AntecipaÃ§Ã£o', 'Especial', '<p>\r\nSÃ£o empreendedores natos, sempre cheios de dinheiro. Contudo, Ã© uma classe mesquinha, nÃ£o gosta de gastar o dinheiro que tÃªm. Preferem guardar seu dinheiro do que ajudar ao prÃ³ximo.\r\n</p>\r\n<p>\r\nTem grandes poderes persuasivos, alÃ©m de conseguir grandes oportunidades em negociaÃ§Ãµes financeiras. \r\n</p>\r\n<p>\r\nSeu conhecimento e inteligÃªncia estÃ£o na mÃ©dia de qualquer pessoa que tenha estudado e se formado com sucesso em uma universidade.\r\n</p>\r\n<p>\r\nPor vezes, tÃªm a chance de prever acontecimentos com base em sua experiÃªncia como negociador ou atÃ© mesmo por ter persuadido outras pessoas no passado.\r\n</p>\r\n<ul>Forte para:\r\n<li>Tomada de decisÃ£o;</li>\r\n<li>Controle mental, depor meio da PersuasÃ£o;</li>\r\n</ul>\r\n<ul>Fraco para:\r\n<li>Ajuda financeira (nÃ£o gosta de gastar dinheiro);</li>\r\n</ul>\r\n<ul>Armamento possÃ­vel:\r\n<li>Facas, adagas, espadas, sabres;</li>\r\n<li>Armas de curta e mÃ©dia distÃ¢ncia, pistolas e blasters(ainda nÃ£o implementado);</li>\r\n<li>Armas de mÃ©dia/longa distÃ¢ncia, rifles semiautomÃ¡ticos e automÃ¡ticos;</li>\r\n</ul>'),
+(4, 'LadrÃ£o', 'Vida', 'ForÃ§a', 'Velocidade', 'Furtividade', 'Destreza', 'Furto', 'ExtorsÃ£o', 'LÃ¡bia', 'Especial', '<p>\r\nLadrÃµes sÃ£o mÃ¡quinas de furtividade. Caso seja necessÃ¡rio roubos ou assaltos, essa classe Ã© a melhor que poderia ser usada.\r\n</p>\r\n<p>\r\nTem grande poder Furtivo, conseguem se aproximar de seus alvos sem serem notados com facilidade, alÃ©m de destreza para conseguir tomar ou furtar o que precisa.\r\n</p>\r\n<p>\r\nTem certa lÃ¡bia para convencer as pessoas a fazerem o que eles querem, mas nem sempre sÃ£o bem-sucedidos, entÃ£o as vezes tentam extorquir fazendo ameaÃ§as Ã  vida de pessoas prÃ³ximas das vÃ­timas.\r\n</p>\r\n\r\n<ul>Forte para:\r\n<li>Roubos, furtos, assaltos;</li>\r\n<li>Esconderijos;</li>\r\n</ul>\r\n<ul>Fraco para:\r\n<li>Combate corpo-a-corpo</li>\r\n</ul>\r\n<ul>Armamento possÃ­vel:\r\n<li>Facas, adagas e espadas;</li>\r\n<li>Armas de curta e mÃ©dia distÃ¢ncia, pistolas e blasters (ainda nÃ£o implementado);</li>\r\n<li>Armas de mÃ©dia/longa distÃ¢ncia, rifles semiautomÃ¡ticos e automÃ¡ticos;</li>\r\n</ul>'),
+(5, 'Assassino', 'Vida', 'ForÃ§a', 'Velocidade', 'Furtividade', 'Destreza', 'InteligÃªncia', 'Carisma', 'PersuasÃ£o', 'Especial', '<p>\r\nAssassinos, como o prÃ³prio nome da classe sugere, sÃ£o matadores profissionais. Caso seja necessÃ¡rio matar alguÃ©m sem ser percebido, essa classe Ã© a mais recomendada.\r\n</p>\r\n<p>\r\nSeus pontos fortes principais sÃ£o velocidade de combate corpo-a-corpo e furtividade. TÃªm certa destreza para manter-se escondido atÃ© alcanÃ§ar seu alvo.\r\n</p>\r\n<p>\r\nPossuem certa carisma e inteligÃªncia para conseguir encontrar informaÃ§Ãµes sobre seus alvos, nem sempre conseguindo, partem para persuasÃ£o.\r\n</p>\r\n\r\n<ul>Forte para:\r\n<li>Combate corpo-a-corpo, seu ataque Ã© muito rÃ¡pido;</li>\r\n<li>Assassinatos escondido e rÃ¡pidos;</li>\r\n</ul>\r\n<ul>Fraco para:\r\n<li>Combates longos, possuem pouca resistÃªncia Ã  danos;</li>\r\n</ul>\r\n<ul>Armamento possÃ­vel:\r\n<li>Facas, adagas, espadas, katanas, sabres, katares;</li>\r\n<li>Armas de curta e mÃ©dia distÃ¢ncia, pistolas e blasters (ainda nÃ£o implementado);</li>\r\n<li>Armas de curta/mÃ©dia distÃ¢ncia, pistolas, blasters (ainda nÃ£o implementado);</li>\r\n<li>Armas de mÃ©dia/longa distÃ¢ncia, rifles semiautomÃ¡ticos e automÃ¡ticos;</li>\r\n</ul>\r\n'),
+(6, 'Hacker', 'Vida', 'ForÃ§a', 'Velocidade', 'InteligÃªncia', 'ProgramaÃ§Ã£o', 'RaciocÃ­nio', 'LÃ¡bia', 'Agilidade', 'Especial', '<p>\r\nHackers sÃ£o mentes pensantes. Conseguem encontrar soluÃ§Ãµes com muita facilidade para qualquer problema tÃ©cnico envolvendo qualquer aparato de tecnologia.\r\n</p>\r\n<p>\r\nSua inteligÃªncia e raciocÃ­nio sÃ£o realmente incrÃ­veis. Caso seja necessÃ¡rio algum tipo de comando para desarmar equipamentos, desligar sistemas, controlar mÃ¡quinas essa classe Ã© a mais indicada.\r\n</p>\r\n<p>\r\nDevido seu tempo estudando e analisando possibilidades, essa classe nÃ£o Ã© a mais recomendada para combate, contudo, a agilidade compensa. Podem fugir rapidamente apagando seus rastros por onde passaram.\r\n</p>\r\n<p>\r\nCaso percebam que nÃ£o vÃ£o conseguir apagar seus rastros, usam sua lÃ¡bia para tentar se misturar e se esconder atÃ© ficarem totalmente seguros.\r\n</p>\r\n\r\n<ul>Forte para:\r\n<li>Controle de equipamentos e mÃ¡quinas;</li>\r\n<li>Quebra de protocolos digitais;</li>\r\n<li>Invadir e tomar controle de sistemas;</li>\r\n<li>Tomadas de decisÃ£o;</li>\r\n</ul>\r\n<ul>Fraco para:\r\n<li>Combates em geral;</li>\r\n</ul>\r\n<ul>Armamento possÃ­vel:\r\n<li>Facas, pistolas;</li>\r\n</ul>'),
+(7, 'Piloto', 'Vida', 'ForÃ§a', 'Velocidade', 'Reflexo', 'Conhecimento', 'InteligÃªncia', 'RaciocÃ­nio', 'Agilidade', 'Especial', '<p>\r\nO melhor reflexo, com certeza. Pilotos sÃ£o bons para encontrarem rotas mais rÃ¡pidas e fÃ¡ceis para fuga.\r\n</p>\r\n<p>\r\nSeu conhecimento, aplicado em como as mÃ¡quinas de transporte funcionam e agilidade para rapidamente encontrar um local seguro fazem do piloto, peÃ§a primordial para o grupo.\r\n</p>\r\n<p>\r\nSeu nÃ­vel de inteligÃªncia e raciocÃ­nio sÃ£o o suficiente para consertar seus veÃ­culos e fazer pequenas adaptaÃ§Ãµes, quando necessÃ¡rio.\r\n</p>\r\n\r\n<ul>Forte para:\r\n<li>Encontrar rotas de fuga;</li>\r\n<li>DireÃ§Ã£o em alta velocidade;</li>\r\n<li>Aprimorar os meios de transportes;</li>\r\n\r\n</ul>\r\n<ul>Fraco para:\r\n<li>Combate corpo-a-corpo;</li>\r\n<li>Tomada de decisÃµes;</li>\r\n</ul>\r\n<ul>Armamento possÃ­vel:\r\n<li>Armas de curta e mÃ©dia distÃ¢ncia, pistolas e blasters (ainda nÃ£o implementado);</li>\r\n<li>Armas de mÃ©dia/longa distÃ¢ncia, rifles semiautomÃ¡ticos e automÃ¡ticos;</li>\r\n</ul>'),
+(8, 'Contrabandista', 'Vida', 'ForÃ§a', 'Velocidade', 'Carisma', 'Carisma', 'NegociaÃ§Ã£o', 'InteligÃªncia', 'AntecipaÃ§Ã£o', 'Especial', '<p>\r\nO rei dos disfarces. Contrabandistas sÃ£o peritos em se esconder e conseguir ou dar informaÃ§Ãµes, por um preÃ§o bem â€œcamaradaâ€.\r\n</p>\r\n<p>\r\nSeu carisma Ã© o ponto mais forte da classe, permitindo conseguir informaÃ§Ãµes facilmente. Tem certa facilidade para negociaÃ§Ãµes e certa inteligÃªncia para conseguir escolher qual melhor forma de concluir suas negociaÃ§Ãµes.\r\n</p>\r\n<p>\r\nDevido a tanto tempo no mundo do contrabando, possui certa cautela e precauÃ§Ã£o, permitindo perceber antecipadamente se algo vai dar errado.\r\n</p>\r\n\r\n<ul>Forte para:\r\n<li>Informantes;</li>\r\n<li>NegociaÃ§Ãµes;</li>\r\n<li>Pequenas tomadas de decisÃ£o;</li>\r\n\r\n</ul>\r\n<ul>Fraco para:\r\n<li>PersuasÃ£o;</li>\r\n</ul>\r\n<ul>Armamento possÃ­vel:\r\n<li>Facas, adagas, espadas, sabres;</li>\r\n<li>Armas de curta e mÃ©dia distÃ¢ncia, pistolas e blasters (ainda nÃ£o implementado);</li>\r\n<li>Armas de mÃ©dia/longa distÃ¢ncia, rifles semiautomÃ¡ticos e automÃ¡ticos;</li>\r\n</ul>'),
+(9, 'Atirador', 'Vida', 'ForÃ§a', 'Velocidade', 'PrecisÃ£o', 'Furtividade', 'Destreza', 'Conhecimento', 'InteligÃªncia', 'Especial', '<p>\r\nPeritos em armas de longa distÃ¢ncia. Atiradores sÃ£o a melhor escolha quando nÃ£o se pode aproximar de um alvo a ser abatido.\r\n</p>\r\n<p>\r\nSeu ponto mais forte Ã© a precisÃ£o. Tem certa facilidade para ficar furtivo, pois precisa ficar bem posicionado para atingir seu alvo sem ser notado.\r\n</p>\r\n<p>\r\nTem certo nÃ­vel de inteligÃªncia e seu conhecimento Ã© totalmente aplicado para seus â€œbrinquedosâ€, suas armas sÃ£o sua maior paixÃ£o.\r\n</p>\r\n\r\n<ul>Forte para:\r\n<li>Combate Ã  longa distÃ¢ncia;</li>\r\n\r\n</ul>\r\n<ul>Fraco para:\r\n<li>Tomadas de decisÃ£o;</li>\r\n</ul>\r\n<ul>Armamento possÃ­vel:\r\n<li>Facas, adagas;</li>\r\n<li>Todas as armas. Curta, mÃ©dia e principalmente longa distÃ¢ncia;</li>\r\n</ul>');
 
 #TABELA DE RAÇAS
 CREATE TABLE tb_racas(
