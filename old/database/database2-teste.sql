@@ -293,6 +293,15 @@ CREATE TABLE tb_usuarios(
     lv_usuario int default 1,
     nivel_usuario int default "0"
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
+INSERT INTO `tb_usuarios` (`id_usuario`, `nome_usuario`, `email_usuario`, `senha_usuario`, `lv_usuario`, `nivel_usuario`) VALUES
+(1, 'Hugo Christian Pereira Gomes', 'hchristian', '230412', 1, 2),
+(2, 'Ricardo Gasparac', 'ricardo@notime.com.br', '123456', 1, 0),
+(3, 'Davi Paiva', 'davipv09@gmail.com', '123456', 1, 0),
+(4, 'Ismael Macedo', 'ismael@notime.com.br', '123456', 1, 0),
+(5, 'Allan', 'allan@notime.com.br', '123456', 1, 0),
+(6, 'Israel', 'israel@notime.com.br', '123456', 1, 0),
+(7, 'Diogo', 'diogo@notime.com.br', '123456', 1, 0),
+(8, 'Lucas', 'lucas@notime.com.br', '123456', 1, 0);
 
 #TABELA DE PLAYERS#
 CREATE TABLE tb_players(
@@ -362,20 +371,40 @@ CREATE TABLE tb_players(
     FOREIGN KEY (habilidade9) REFERENCES tb_lista_habilidades(id_habilidade)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
 
-INSERT INTO `tb_usuarios` (`id_usuario`, `nome_usuario`, `email_usuario`, `senha_usuario`, `lv_usuario`, `nivel_usuario`) VALUES
-(1, 'Hugo Christian Pereira Gomes', 'hchristian', '230412', 1, 2),
-(2, 'Ricardo Gasparac', 'ricardo@notime.com.br', '123456', 1, 0),
-(3, 'Davi Paiva', 'davipv09@gmail.com', '123456', 1, 0),
-(4, 'Ismael Macedo', 'ismael@notime.com.br', '123456', 1, 0),
-(5, 'Allan', 'allan@notime.com.br', '123456', 1, 0),
-(6, 'Israel', 'israel@notime.com.br', '123456', 1, 0),
-(7, 'Diogo', 'diogo@notime.com.br', '123456', 1, 0),
-(8, 'Lucas', 'lucas@notime.com.br', '123456', 1, 0);
-
-
 INSERT INTO `tb_players` (`id_player`, `nome_player`, `personagem_player`, `raca_player`, `classe_player`, `xp_player`, `lv_player`, `atk_player`, `hab_player`, `atr1_titulo`, `atr1_v`, `atr2_titulo`, `atr2_v`, `atr3_titulo`, `atr3_v`, `atr4_titulo`, `atr4_v`, `hab1_titulo`, `hab1_v`, `hab2_titulo`, `hab2_v`, `hab3_titulo`, `hab3_v`, `hab4_titulo`, `hab4_v`, `hab5_titulo`, `hab5_v`, `arma1_player`, `arma2_player`, `arma3_player`, `arma4_player`, `arma5_player`, `def1_player`, `def2_player`, `def3_player`, `habilidade1`, `habilidade2`, `habilidade3`, `habilidade4`, `habilidade5`, `habilidade6`, `habilidade7`, `habilidade8`, `habilidade9`) VALUES
 (1, 2, 'Alexander Payne', 1, 2, 0, 1, 0, 0, 'Vida', 30, 'ForÃ§a', 15, 'Velocidade', 20, 'Conhecimento', 35, 'Criatividade', 16, 'RaciocÃ­nio', 24, 'InteligÃªncia', 20, 'Produzir', 10, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 5, 6, 1, 1, 1, 1, 1, 1, 1),
-(3, 4, 'Vulpis', 1, 6, 0, 1, 0, 0, 'Vida', 37, 'ForÃ§a', 15, 'Velocidade', 18, 'InteligÃªncia', 30, 'Programaï¿½ï¿½o', 25, 'RaciocÃ­nio', 25, 'LÃ¡bia', 10, 'Agilidade', 10, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 29, 31, 1, 1, 1, 1, 1, 1, 1),
-(4, 3, 'Shelbi-1.0', 2, 4, 0, 1, 0, 0, 'Vida', 42, 'ForÃ§a', 15, 'Velocidade', 20, 'Furtividade', 23, 'Destreza', 10, 'Furto', 25, 'ExtorsÃ£o', 5, 'LÃ¡bia', 30, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 17, 18, 1, 1, 1, 1, 1, 1, 1),
-(5, 7, 'Minimus', 1, 5, 0, 1, 0, 0, 'Vida', 45, 'ForÃ§a', 12, 'Velocidade', 22, 'Furtividade', 21, 'Destreza', 25, 'InteligÃªncia', 15, 'Carisma', 10, 'PersuasÃ£o', 20, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 23, 25, 1, 1, 1, 1, 1, 1, 1),
-(6, 5, 'Dante', 1, 9, 0, 1, 0, 0, 'Vida', 45, 'ForÃ§a', 15, 'Velocidade', 20, 'Precisï¿½o', 20, 'Furtividade', 13, 'Destreza', 15, 'Conhecimento', 17, 'InteligÃªncia', 25, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 48, 49, 1, 1, 1, 1, 1, 1, 1);
+(2, 4, 'Vulpis', 1, 6, 0, 1, 0, 0, 'Vida', 37, 'ForÃ§a', 15, 'Velocidade', 18, 'InteligÃªncia', 30, 'Programaï¿½ï¿½o', 25, 'RaciocÃ­nio', 25, 'LÃ¡bia', 10, 'Agilidade', 10, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 29, 31, 1, 1, 1, 1, 1, 1, 1),
+(3, 3, 'Shelbi-1.0', 2, 4, 0, 1, 0, 0, 'Vida', 42, 'ForÃ§a', 15, 'Velocidade', 20, 'Furtividade', 23, 'Destreza', 10, 'Furto', 25, 'ExtorsÃ£o', 5, 'LÃ¡bia', 30, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 17, 18, 1, 1, 1, 1, 1, 1, 1),
+(4, 7, 'Minimus', 1, 5, 0, 1, 0, 0, 'Vida', 45, 'ForÃ§a', 12, 'Velocidade', 22, 'Furtividade', 21, 'Destreza', 25, 'InteligÃªncia', 15, 'Carisma', 10, 'PersuasÃ£o', 20, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 23, 25, 1, 1, 1, 1, 1, 1, 1),
+(5, 5, 'Dante', 1, 9, 0, 1, 0, 0, 'Vida', 45, 'ForÃ§a', 15, 'Velocidade', 20, 'Precisï¿½o', 20, 'Furtividade', 13, 'Destreza', 15, 'Conhecimento', 17, 'InteligÃªncia', 25, 'Especial', 18, 2, 3, 1, 1, 1, 2, 1, 1, 48, 49, 1, 1, 1, 1, 1, 1, 1);
+
+CREATE TABLE tb_tipo_inimigos(
+	id_tipo int primary key auto_increment,
+	tipo_inimigo varchar(25)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
+INSERT INTO tb_tipo_inimigos(tipo_inimigo) VALUES('Comum'),('Soldado'),('Capitao'),('General'),('Boss');
+
+CREATE TABLE tb_familias(
+	id_familia int primary key auto_increment,
+	nome_familia varchar(50),
+	descr_familia text
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
+INSERT INTO tb_familias(nome_familia,descr_familia) VALUES('Christmass','Descrição da família');
+
+create table tb_inimigos(
+	id_inimigo int primary key auto_increment,
+	nome_inimigo varchar(500),
+	tipo_inimigo int,
+	raca_inimigo int,
+	familia_inimigo int,
+	tipo_combate varchar(255),
+	armas_inimigo varchar(500),
+	FOREIGN KEY (tipo_inimigo) REFERENCES tb_tipo_inimigos(id_tipo),
+	FOREIGN KEY (raca_inimigo) REFERENCES tb_racas(id_raca),
+	FOREIGN KEY (familia_inimigo) REFERENCES tb_familias(id_familia)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_mysql500_ci;
+
+INSERT INTO `tb_inimigos` (`id_inimigo`, `nome_inimigo`, `tipo_inimigo`, `raca_inimigo`, `familia_inimigo`, `tipo_combate`, `armas_inimigo`) VALUES
+(1, 'Soldado 1', 2, 1, NULL, 'Proximidade, curto alcançe', 'Faca, .45 Semiautomatica, Espingarda B-300'),
+(2, 'Soldado 2', 3, 2, NULL, 'Curto, Médio', '.45 Semiautomatica, Espingarda B-300'),
+(3, 'Soldado 3', 4, 3, NULL, 'Curto, Médio, Longo', '.45 Semiautomatica, Espingarda B-300, M&P15 .22');

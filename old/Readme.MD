@@ -28,6 +28,7 @@ Recursos disponíveis:
                 -Ativar/Desativar;
             - Raças:
                 -Descrição e história das raças;
+            - Inimigos
 
 Próximas Jornadas:
 
@@ -36,7 +37,8 @@ Próximas Jornadas:
         - Defesas;
     - Adicionar Skills;
     - Adicionar Inimigos
-        -Dados em Excel;
+        - Inserir novos dados;
+        - Criar interface amigável para cadastrar inimigos;
     
 
     

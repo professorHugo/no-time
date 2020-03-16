@@ -1,1 +1,1 @@
-Escudo do mestre
+<p class="col-xs-12 text-center lead" style="margin-top:150px">Este recurso ficará disponível na próxima versão</p>
