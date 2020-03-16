@@ -15,8 +15,5 @@ $QueryCadastrarUsuario = "
 $ExeQrCadastrarUsuario = mysqli_query($connection, $QueryCadastrarUsuario);
 
 if($ExeQrCadastrarUsuario){
-    echo "Jogador inserido no banco de dados";
-    echo "<br>";
     include 'pages/Logar-Usuario.php';
 }
-echo "<br>";

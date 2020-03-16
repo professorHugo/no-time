@@ -14,14 +14,14 @@ and open the template in the editor.
 
 <head>
     <meta charset="UTF-8">
-    <title>No time, BRo</title>
+    <title><?php echo SITENAME ." - ". VERSIONS?></title>
     <?php include_once 'parts/head.php'; ?>
 </head>
 
 <body>
     <div class="section">
         <?php include 'parts/Menu.php';?>
-    </div>
+    
     
     <h2 id="Background" class="section col-xs-10 col-xs-push-1">Status do Jogo: Criação</h2>
 
@@ -55,9 +55,20 @@ and open the template in the editor.
         ?>
 
     </div>
+    
     <?php include 'parts/Modals/Criacao-Personagem.php';?>
     <?php include 'parts/Modals/Criar-Conta.php';?>
     <?php include 'parts/Modals/Fazer-Login.php';?>
+    </div>
+    
+    <div class="col-xs-12 footer">
+        <p class="col-xs-12 col-md-6">
+            RPG Factory™ - <?php echo VERSIONS?>
+        </p>
+        <p class="col-xs-12 col-md-6 text-right">
+            Agência Next2You - Sempre ao seu lado
+        </p>
+    </div>
 </body>
 
 </html>
